@@ -169,7 +169,7 @@ namespace PG
                     GameController.Instance.RestartScene ();
                 }
 
-                if (!GameController.SplitScreen && Input.GetKeyDown (KeyCode.N))
+                if (!GameController.SplitScreen && Input.GetKeyDown (KeyCode.None))
                 {
                     GameController.Instance.SetNextCar ();
                 }
