@@ -38,7 +38,7 @@ namespace PG
             if (selectedCarIndex >= 0 && selectedCarIndex < CarPrefabs.Count)
             {
                 PlayerCar1 = Instantiate(CarPrefabs[selectedCarIndex]); // Создаём машину из префаба
-               PlayerCar1.transform.position = StartPositions[0].position;
+                 PlayerCar1.transform.position = StartPositions[0].position;
             }
             else
             {
