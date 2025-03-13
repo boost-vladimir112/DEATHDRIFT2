@@ -2855,6 +2855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: S34_Race_ForCrazyroad_AI (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6037654053613497651, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6377623686566131593, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3982,6 +3986,10 @@ PrefabInstance:
     - target: {fileID: 6037654053613497651, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
       propertyPath: m_Name
       value: S34_Race_ForCrazyroad_AI (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037654053613497651, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6377623686566131593, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
       propertyPath: m_RootOrder
@@ -13575,6 +13583,11 @@ Transform:
   - {fileID: 2140083203}
   m_Father: {fileID: 5312849544793509411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1445874442 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1230429700, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+  m_PrefabInstance: {fileID: 3252014628470532736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1448173524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13986,6 +13999,10 @@ PrefabInstance:
     - target: {fileID: 6037654053613497651, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
       propertyPath: m_Name
       value: S34_Race_ForCrazyroad_AI (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037654053613497651, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6377623686566131593, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
       propertyPath: m_RootOrder
@@ -20213,6 +20230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: S34_Race_ForCrazyroad_Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6037654053613497651, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6377623686566131593, guid: 8d79a18806d7fc24c81e12ac43a364c1, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -20576,6 +20597,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1230429699, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1230429700, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23
@@ -20586,7 +20611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1230429700, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -190
+      value: -330
       objectReference: {fileID: 0}
     - target: {fileID: 1230429700, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20659,6 +20684,10 @@ PrefabInstance:
     - target: {fileID: 486573782093654051, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404350736093119634, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -194.0859
       objectReference: {fileID: 0}
     - target: {fileID: 1961303481521766461, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -20797,8 +20826,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: AllCars.Array.size
+      propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: AllCars.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: AllCars.Array.data[0]
@@ -20839,6 +20872,10 @@ PrefabInstance:
     - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: AllCars.Array.data[9]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: CarPrefabs.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: AllCars.Array.data[10]
@@ -21256,6 +21293,26 @@ PrefabInstance:
       propertyPath: AllCars.Array.data[113]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: CarPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3216702899630228816, guid: 4d74c7d67578b6e40984119cec6e3f9c, type: 3}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: CarPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8678609203692205512, guid: 55e6364b751c9aa489c445a114a4db2e, type: 3}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: CarPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 6544158808189460370, guid: 7ab519218cad86c4a943bbacef9d966a, type: 3}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: StartPositions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: StartPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 1445874442}
     - target: {fileID: 3252014629734535972, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -21419,6 +21476,10 @@ PrefabInstance:
     - target: {fileID: 5960348794805578952, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172627269248037499, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8203447589775816330, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_AnchorMax.y

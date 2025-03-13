@@ -1,24 +1,16 @@
-﻿using System.Collections;
-using System.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
+using System.Linq;
 
 namespace PG
 {
-    /// <summary>
-    /// The game controller is responsible for initializing the player's car.
-    /// </summary>
-    public class GameController :Singleton<GameController>
+    public class GameController : Singleton<GameController>
     {
         public TextMeshProUGUI TimeScaleText;
         public Transform[] StartPositions;
-        public List<CarController> AllCars = new List<CarController>();
+        public List<CarController> CarPrefabs; // Список префабов машин
         public bool m_SplitScreen;
         public static bool SplitScreen => Instance && Instance.m_SplitScreen && SoundHelper.SoundSupportSplitScreen && InputHelper.InputSupportSplitScreen;
 
@@ -29,159 +21,94 @@ namespace PG
 
         List<VehicleController> AllVehicles = new List<VehicleController>();
 
-        void Start ()
+        void Start()
         {
             if (TimeScaleText)
+                TimeScaleText.SetActive(false);
+
+            if (StartPositions == null || StartPositions.Length == 0)
             {
-                TimeScaleText.SetActive (false);
+                //var respawns = GameObject.FindGameObjectsWithTag("Respawn");
+                //StartPositions = respawns.Select(r => r.transform).ToArray();
             }
 
-            if (StartPositions == null || StartPositions.Length <= 0)
+            int selectedCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
+            Debug.Log($"Выбранная машина с индексом: {selectedCarIndex}");
+
+            if (selectedCarIndex >= 0 && selectedCarIndex < CarPrefabs.Count)
             {
-                var respawns = GameObject.FindGameObjectsWithTag ("Respawn");
-                StartPositions = new Transform[respawns.Length];
-                for (int i = 0; i < respawns.Length; i++)
-                {
-                    StartPositions[i] = respawns[i].transform;
-                }
+                PlayerCar1 = Instantiate(CarPrefabs[selectedCarIndex]); // Создаём машину из префаба
+               PlayerCar1.transform.position = StartPositions[0].position;
             }
-            AllCars.RemoveAll (c => c == null);
-            AllVehicles = FindObjectsOfType<VehicleController> ().ToList();
-            var allCars = FindObjectsOfType<CarController> ().ToList ();
-            AllCars.AddRange (allCars.Where(c => !AllCars.Contains(c)));
-
-
-
-            if (!PlayerCar1 && AllCars.Count == 0)
+            else
             {
-                PlayerCar1 = Instantiate (B.GameSettings.AvailableVehicles.First(v => v as CarController) as CarController);
-                if (StartPositions != null && StartPositions.Length > 0)
-                {
-                    PlayerCar1.transform.position = StartPositions[0].position;
-                    PlayerCar1.transform.rotation = StartPositions[0].rotation;
-                }
-                AllVehicles.Add (PlayerCar1);
-                AllCars.Add (PlayerCar1);
-            }
-            else if (!PlayerCar1)
-            {
-                PlayerCar1 = AllCars[0];
+                Debug.LogError("Выбранная машина не найдена, используем первую доступную.");
+                PlayerCar1 = Instantiate(CarPrefabs.FirstOrDefault());
             }
 
-            if (SplitScreen)
+          //  if (PlayerCar1 && StartPositions.Length > 0)
+          //  {
+           //     PlayerCar1.transform.position = StartPositions[0].position;
+           //     PlayerCar1.transform.rotation = StartPositions[0].rotation;
+           // }
+
+            if (SplitScreen && CarPrefabs.Count > 1)
             {
-                if (!PlayerCar2 && AllCars.Count <= 1)
+                int secondCarIndex = (selectedCarIndex + 1) % CarPrefabs.Count;
+                PlayerCar2 = Instantiate(CarPrefabs[secondCarIndex]);
+                if (PlayerCar2 && StartPositions.Length > 1)
                 {
-                    PlayerCar2 = Instantiate (B.GameSettings.AvailableVehicles.First (v => v as CarController) as CarController);
-                    if (StartPositions != null && StartPositions.Length > 1)
-                    {
-                        PlayerCar2.transform.position = StartPositions[0].position;
-                        PlayerCar2.transform.rotation = StartPositions[0].rotation;
-                    }
-                    AllVehicles.Add (PlayerCar2);
-                    AllCars.Add (PlayerCar2);
-                }
-                else if (!PlayerCar2)
-                {
-                    PlayerCar2 = AllCars[1];
+                    PlayerCar2.transform.position = StartPositions[1].position;
+                    PlayerCar2.transform.rotation = StartPositions[1].rotation;
                 }
             }
 
-            UpdateSelectedCars ();
-
+            UpdateSelectedCars();
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
         }
 
-        private void Update ()
+        void UpdateSelectedCars()
         {
-            
-        }
-
-        public void SetNextCar ()
-        {
-            if (PlayerCar1)
-            {
-                PlayerCar1.VehicleSFX.RemoveStudioListiner ();
-            }
-
-            var index = PlayerCar1? AllCars.IndexOf(PlayerCar1): 0;
-            index = MathExtentions.Repeat (index + 1, 0, AllCars.Count - 1);
-
-            PlayerCar1 = AllCars[index];
-            UpdateSelectedCars ();
-        }
-
-        void UpdateSelectedCars ()
-        {
-            Player1 = UpdateSelectedCar (Player1, PlayerCar1);
+            Player1 = UpdateSelectedCar(Player1, PlayerCar1);
             if (SplitScreen)
-            {
-                Player2 = UpdateSelectedCar (Player2, PlayerCar2);
-            }
+                Player2 = UpdateSelectedCar(Player2, PlayerCar2);
         }
 
-        InitializePlayer UpdateSelectedCar (InitializePlayer player, CarController car)
+        InitializePlayer UpdateSelectedCar(InitializePlayer player, CarController car)
         {
             if (!player)
             {
-                PlayerController playerPrefab;
-
-                playerPrefab = GameSettings.IsMobilePlatform ?
+                var playerPrefab = GameSettings.IsMobilePlatform ?
                     B.ResourcesSettings.PlayerControllerPrefab_ForMobile :
                     B.ResourcesSettings.PlayerControllerPrefab;
 
-                player = GameObject.Instantiate (playerPrefab);
+                player = Instantiate(playerPrefab);
             }
 
-            if (player.Initialize (car))
+            if (player.Initialize(car))
             {
-                player.name = string.Format ("PlayerController_{0}", player.Vehicle.name);
-                Debug.LogFormat ("Player for {0} is initialized", player.Vehicle.name);
+                player.name = $"PlayerController_{player.Vehicle.name}";
+                Debug.Log($"Player for {player.Vehicle.name} is initialized");
             }
 
             return player;
         }
 
-        public void RestartScene ()
+        public void RestartScene()
         {
-            var scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene (scene.buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        public void ChangeTimeScale (float delta)
+        public void ChangeTimeScale(float delta)
         {
-            Time.timeScale = (Time.timeScale + delta).Clamp (0.1f, 2f);
+            Time.timeScale = Mathf.Clamp(Time.timeScale + delta, 0.1f, 2f);
             if (TimeScaleText)
             {
-                TimeScaleText.SetActive (!Mathf.Approximately (Time.timeScale, 1));
-                TimeScaleText.text = string.Format ("Time scale: {0}", Time.timeScale);
+                TimeScaleText.SetActive(!Mathf.Approximately(Time.timeScale, 1));
+                TimeScaleText.text = $"Time scale: {Time.timeScale}";
             }
 
-            SoundHelper.ChangeSoundTimeScale (Time.timeScale);
+            SoundHelper.ChangeSoundTimeScale(Time.timeScale);
         }
     }
-
-#if UNITY_EDITOR
-
-    [CustomEditor (typeof (GameController))]
-    public class GameControllerEditor :Editor
-    {
-        public override void OnInspectorGUI ()
-        {
-            base.OnInspectorGUI ();
-            if ((target as GameController).m_SplitScreen)
-            {
-                if (!SoundHelper.SoundSupportSplitScreen)
-                {
-                    EditorGUILayout.HelpBox ("Current SoundSystem does not support split screen. \nPlease Install the FMOD dependency (The documentation describes how to do this).", MessageType.Error);
-                }
-                if (!InputHelper.InputSupportSplitScreen)
-                {
-                    EditorGUILayout.HelpBox ("Current InputSystem (Old input system) does not support split screen. \nPlease Install the NewInputSystem dependency (The documentation describes how to do this).", MessageType.Error);
-                }
-            }
-        }
-    }
-
-#endif
 }

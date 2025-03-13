@@ -110,7 +110,7 @@ namespace PG.UI
             }
             if (SetNextCarBtn)
             {
-                SetNextCarBtn.onClick.AddListener (() => GameController.Instance.SetNextCar ());
+              //  SetNextCarBtn.onClick.AddListener (() => GameController.Instance.SetNextCar ());
             }
             if (ExitFromCar)
             {
