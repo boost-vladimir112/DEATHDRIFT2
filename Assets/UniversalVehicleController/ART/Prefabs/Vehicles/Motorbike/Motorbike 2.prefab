@@ -30213,9 +30213,10 @@ GameObject:
   - component: {fileID: 8678609203692205512}
   - component: {fileID: 2334602859511381354}
   - component: {fileID: 3985894190575167428}
+  - component: {fileID: -7304021044233637121}
   m_Layer: 0
   m_Name: Motorbike 2
-  m_TagString: Untagged
+  m_TagString: PlayerCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30661,6 +30662,27 @@ MonoBehaviour:
   - {fileID: 563705581526905744}
   - {fileID: 563705580634035704}
   EnableLogAndGizmo: 0
+--- !u!65 &-7304021044233637121
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883241661445974010}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.84, y: 1, z: 1.93}
+  m_Center: {x: 0, y: 0.64, z: 0}
 --- !u!1 &987509296149825941
 GameObject:
   m_ObjectHideFlags: 0
