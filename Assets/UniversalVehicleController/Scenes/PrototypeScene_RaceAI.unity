@@ -265,6 +265,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b044449843e77f340834e452fed97a33, type: 3}
+--- !u!114 &54152443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+  m_PrefabInstance: {fileID: 3252014628470532736}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e99e7a25a6d14a448f9b5b52fd8d245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &60012909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,7 +569,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 271755041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 54152443}
+        m_TargetAssemblyTypeName: PG.GameController, Assembly-CSharp
+        m_MethodName: RestartScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &271755041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +756,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280299369}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &288773495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4868695688324335480, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+  m_PrefabInstance: {fileID: 3252014628470532736}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314353488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1741,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960171759}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &976826129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2115112301589370953, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+  m_PrefabInstance: {fileID: 3252014628470532736}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1012847212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,7 +3389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1855599536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 54152443}
+        m_TargetAssemblyTypeName: PG.GameController, Assembly-CSharp
+        m_MethodName: LoadMenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1855599536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4002,9 +4059,165 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[0].Btn
+      value: 
+      objectReference: {fileID: 288773495}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[1].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[2].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[3].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[4].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[5].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[6].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[7].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[8].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[9].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[10].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[11].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[12].Btn
+      value: 
+      objectReference: {fileID: 976826129}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[0].Scene.SceneName
+      value: DriftScene_DriftAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[1].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[2].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[3].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[4].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[5].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[6].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[7].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[8].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[9].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: ButtonScenes.Array.data[0].Scene.SceneAsset
       value: 
+      objectReference: {fileID: 102900000, guid: cdfcdadea2ad74f4682a592cce9aae76, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[10].Scene.SceneName
+      value: PrototypeScene_CharacterController
       objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[11].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[12].Scene.SceneName
+      value: PrototypeScene_CharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[1].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[2].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[3].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[4].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[5].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[6].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[7].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[8].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[9].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[10].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[11].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
+    - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: ButtonScenes.Array.data[12].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8059412356e4b8a4984ebfc5cd3e114a, type: 3}
     - target: {fileID: 2620672743816008707, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4552,7 +4765,7 @@ PrefabInstance:
     - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: CarPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 7452193394398133850, guid: 99db7cbeae6bd7144b630cf299fe7ec7, type: 3}
+      objectReference: {fileID: 8678609203692205512, guid: 80d3f023ec8c5614b9ac0793d677d335, type: 3}
     - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: CarPrefabs.Array.data[2]
       value: 

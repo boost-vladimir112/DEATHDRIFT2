@@ -98,6 +98,10 @@ namespace PG
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        public void LoadMenuScene()
+        {
+            SceneManager.LoadScene(0);
+        }
 
         public void ChangeTimeScale(float delta)
         {
