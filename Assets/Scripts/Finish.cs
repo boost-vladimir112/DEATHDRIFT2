@@ -1,10 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Finish : MonoBehaviour
 {
     private List<GameObject> finishedCars = new List<GameObject>(); // Очередность машин на финише
+    [SerializeField] private TextMeshProUGUI winText;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,8 @@ public class Finish : MonoBehaviour
                 if (other.CompareTag("PlayerCar"))
                 {
                     int position = finishedCars.Count; // Определяем место игрока
+                    winText.text = position.ToString();
+
                     Debug.Log("Игрок финишировал на месте: " + position);
                 }
             }
