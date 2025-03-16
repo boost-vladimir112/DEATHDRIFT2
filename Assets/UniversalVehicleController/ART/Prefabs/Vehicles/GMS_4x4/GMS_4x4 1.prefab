@@ -4985,7 +4985,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31d968352e232ef4eb4bfa3585b1decc, type: 2}
+  - {fileID: 2100000, guid: 1b37a31ce5361c04c8bc5c41480d0102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88377,7 +88377,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 01a47f9a8c8acbd4b91e93e66a1cebe9, type: 2}
+  - {fileID: 2100000, guid: 1b37a31ce5361c04c8bc5c41480d0102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105471,6 +105471,10 @@ PrefabInstance:
       propertyPath: BackFireParticles.Array.data[1]
       value: 
       objectReference: {fileID: 3782247042659535258}
+    - target: {fileID: 4224059862672674556, guid: 6e6cff603abe9ef49a2cd09f5c34d7fd, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4769193903886470041, guid: 6e6cff603abe9ef49a2cd09f5c34d7fd, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -105503,6 +105507,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -22.433
       objectReference: {fileID: 0}
+    - target: {fileID: 6390863259021685353, guid: 6e6cff603abe9ef49a2cd09f5c34d7fd, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7088558658320364917, guid: 6e6cff603abe9ef49a2cd09f5c34d7fd, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -105534,6 +105542,10 @@ PrefabInstance:
     - target: {fileID: 8004169618456367547, guid: 6e6cff603abe9ef49a2cd09f5c34d7fd, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544395289640737694, guid: 6e6cff603abe9ef49a2cd09f5c34d7fd, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

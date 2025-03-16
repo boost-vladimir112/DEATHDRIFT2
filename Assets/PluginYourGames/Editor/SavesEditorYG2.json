@@ -13,13 +13,14 @@
     false,
     false
   ],
-  "idSave": 13,
-  "money": 47000,
-  "SelectedCar": 9,
+  "idSave": 15,
+  "money": 48500,
+  "SelectedCar": 10,
   "carOwned": [
     0,
     1,
     2,
-    9
+    9,
+    10
   ]
 }
