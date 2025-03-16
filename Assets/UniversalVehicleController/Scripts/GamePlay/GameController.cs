@@ -97,10 +97,14 @@ namespace PG
         public void RestartScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            AudioListener.volume = 1;
+            Time.timeScale = 1f;
         }
         public void LoadMenuScene()
         {
             SceneManager.LoadScene(0);
+            AudioListener.volume = 1;
+            Time.timeScale = 1f;
         }
 
         public void ChangeTimeScale(float delta)
