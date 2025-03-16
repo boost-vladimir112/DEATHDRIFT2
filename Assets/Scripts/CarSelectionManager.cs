@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using YG;
+using System.Collections.Generic;
 
 public class CarSelectionManager : MonoBehaviour
 {
-    public GameObject[] cars; // Массив машин
-    public int[] carPrices; // Цена машин (первая бесплатная)
+    public GameObject[] cars;
+    public int[] carPrices;
     private int selectedCarIndex = 0;
 
     public Button leftButton;
@@ -17,23 +18,24 @@ public class CarSelectionManager : MonoBehaviour
 
     public int balance;
 
-
     private void Start()
     {
-        selectedCarIndex = YG2.GetState("SelectedCar");
-        balance = YG2.GetState("money");
-
-        // Проверка и инициализация массива купленных машин
-        if (YG2.GetState<int[]>("carsOwned") == null || YG2.GetState<int[]>("carsOwned").Length != cars.Length)
+        // Если лист пустой (первый запуск), открыть первую машину
+        if (YG2.saves.carOwned.Count == 0)
         {
-            int[] initialCarsOwned = new int[cars.Length];
-            initialCarsOwned[0] = 1; // Первая машина бесплатная
-            YG2.SetState("carsOwned", initialCarsOwned);
+            YG2.saves.carOwned.Add(0); // Первая бесплатная
+            YG2.SaveProgress();
         }
+        //YG2.SetState("money", 50000);
+        selectedCarIndex = YG2.saves.SelectedCar;
+        balance = YG2.GetState("money");
 
         UpdateUI();
     }
-
+    private void Update()
+    {
+        Debug.Log(balance);
+    }
 
     public void NextCar()
     {
@@ -52,28 +54,24 @@ public class CarSelectionManager : MonoBehaviour
     {
         if (IsCarOwned(selectedCarIndex))
         {
-            YG2.SetState("SelectedCar", selectedCarIndex);
+            YG2.saves.SelectedCar = selectedCarIndex;
         }
         else
         {
             if (balance >= carPrices[selectedCarIndex])
             {
                 balance -= carPrices[selectedCarIndex];
-                YG2.SetState("money", balance);
-
-                // Отмечаем машину как купленную
-                int[] ownedCars = YG2.GetState<int[]>("carsOwned");
-                ownedCars[selectedCarIndex] = 1;
-                YG2.SetState("carsOwned", ownedCars);
+                YG2.saves.money = balance;
+                YG2.saves.carOwned.Add(selectedCarIndex);
             }
         }
+        YG2.SaveProgress();
         UpdateUI();
     }
 
     private bool IsCarOwned(int index)
     {
-        int[] ownedCars = YG2.GetState<int[]>("carsOwned");
-        return ownedCars != null && ownedCars[index] == 1;
+        return YG2.saves.carOwned.Contains(index);
     }
 
     private void UpdateUI()

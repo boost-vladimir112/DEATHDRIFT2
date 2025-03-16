@@ -1,0 +1,25 @@
+{
+  "stringKeys": [],
+  "stringValues": [],
+  "floatKeys": [],
+  "floatValues": [],
+  "intKeys": [],
+  "intValues": [],
+  "intExample": 5,
+  "strExample": "Hello!",
+  "boolExample": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "idSave": 13,
+  "money": 47000,
+  "SelectedCar": 9,
+  "carOwned": [
+    0,
+    1,
+    2,
+    9
+  ]
+}

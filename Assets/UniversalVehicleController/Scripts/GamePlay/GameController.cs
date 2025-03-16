@@ -33,7 +33,7 @@ namespace PG
                 //StartPositions = respawns.Select(r => r.transform).ToArray();
             }
 
-            int selectedCarIndex = YG2.GetState("SelectedCar");
+            int selectedCarIndex = YG2.saves.SelectedCar;
             Debug.Log($"Выбранная машина с индексом: {selectedCarIndex}");
 
             if (selectedCarIndex >= 0 && selectedCarIndex < CarPrefabs.Count)
