@@ -13,7 +13,8 @@ public class CarSelectionManager : MonoBehaviour
     public Button leftButton;
     public Button rightButton;
     public Button actionButton;
-    public TextMeshProUGUI actionButtonText;
+    public GameObject selectText;
+    public GameObject buyText;
     public TextMeshProUGUI priceText;
 
     public int balance;
@@ -26,15 +27,11 @@ public class CarSelectionManager : MonoBehaviour
             YG2.saves.carOwned.Add(0); // Первая бесплатная
             YG2.SaveProgress();
         }
-        //YG2.SetState("money", 50000);
+
         selectedCarIndex = YG2.saves.SelectedCar;
         balance = YG2.GetState("money");
 
         UpdateUI();
-    }
-    private void Update()
-    {
-        Debug.Log(balance);
     }
 
     public void NextCar()
@@ -54,15 +51,18 @@ public class CarSelectionManager : MonoBehaviour
     {
         if (IsCarOwned(selectedCarIndex))
         {
+            // Устанавливаем выбранную машину
             YG2.saves.SelectedCar = selectedCarIndex;
         }
         else
         {
+            // Покупка машины
             if (balance >= carPrices[selectedCarIndex])
             {
                 balance -= carPrices[selectedCarIndex];
                 YG2.saves.money = balance;
                 YG2.saves.carOwned.Add(selectedCarIndex);
+                YG2.saves.SelectedCar = selectedCarIndex; // После покупки сразу выбрать
             }
         }
         YG2.SaveProgress();
@@ -81,14 +81,31 @@ public class CarSelectionManager : MonoBehaviour
             cars[i].SetActive(i == selectedCarIndex);
         }
 
+        // Проверяем, принадлежит ли машина
         if (IsCarOwned(selectedCarIndex))
         {
-            actionButtonText.text = "Select";
             priceText.text = "";
+
+            // Проверяем, выбрана ли она
+            if (selectedCarIndex == YG2.saves.SelectedCar)
+            {
+                // Машина выбрана — убираем кнопку
+                actionButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                // Машина открыта, но не выбрана
+                actionButton.gameObject.SetActive(true);
+                selectText.SetActive(true);
+                buyText.SetActive(false);
+            }
         }
         else
         {
-            actionButtonText.text = "Buy";
+            // Машина не куплена
+            actionButton.gameObject.SetActive(true);
+            selectText.SetActive(false);
+            buyText.SetActive(true);
             priceText.text = "Цена: " + carPrices[selectedCarIndex];
         }
     }
