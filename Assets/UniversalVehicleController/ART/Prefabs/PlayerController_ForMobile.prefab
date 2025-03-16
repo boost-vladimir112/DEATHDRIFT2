@@ -2399,10 +2399,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345699914434360005, guid: 1524c4835537a674eaf4e6d89a3123ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4706507049479315329, guid: 1524c4835537a674eaf4e6d89a3123ed, type: 3}
       propertyPath: UserInput
       value: 
       objectReference: {fileID: 2292077526510270115}
+    - target: {fileID: 5897506638753541228, guid: 1524c4835537a674eaf4e6d89a3123ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
