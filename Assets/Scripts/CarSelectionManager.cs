@@ -16,19 +16,24 @@ public class CarSelectionManager : MonoBehaviour
     public TextMeshProUGUI priceText;
 
     public int balance;
-    
+
 
     private void Start()
     {
-        selectedCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
-        UpdateUI();
-
-        YG2.SetState("money", 5000);
+        selectedCarIndex = YG2.GetState("SelectedCar");
         balance = YG2.GetState("money");
-        Debug.Log(balance);
-      
 
+        // Проверка и инициализация массива купленных машин
+        if (YG2.GetState<int[]>("carsOwned") == null || YG2.GetState<int[]>("carsOwned").Length != cars.Length)
+        {
+            int[] initialCarsOwned = new int[cars.Length];
+            initialCarsOwned[0] = 1; // Первая машина бесплатная
+            YG2.SetState("carsOwned", initialCarsOwned);
+        }
+
+        UpdateUI();
     }
+
 
     public void NextCar()
     {
@@ -47,16 +52,19 @@ public class CarSelectionManager : MonoBehaviour
     {
         if (IsCarOwned(selectedCarIndex))
         {
-            PlayerPrefs.SetInt("SelectedCar", selectedCarIndex);
+            YG2.SetState("SelectedCar", selectedCarIndex);
         }
         else
         {
-          
             if (balance >= carPrices[selectedCarIndex])
             {
                 balance -= carPrices[selectedCarIndex];
                 YG2.SetState("money", balance);
-                PlayerPrefs.SetInt("CarOwned_" + selectedCarIndex, 1);
+
+                // Отмечаем машину как купленную
+                int[] ownedCars = YG2.GetState<int[]>("carsOwned");
+                ownedCars[selectedCarIndex] = 1;
+                YG2.SetState("carsOwned", ownedCars);
             }
         }
         UpdateUI();
@@ -64,7 +72,8 @@ public class CarSelectionManager : MonoBehaviour
 
     private bool IsCarOwned(int index)
     {
-        return index == 0 || PlayerPrefs.GetInt("CarOwned_" + index, 0) == 1;
+        int[] ownedCars = YG2.GetState<int[]>("carsOwned");
+        return ownedCars != null && ownedCars[index] == 1;
     }
 
     private void UpdateUI()

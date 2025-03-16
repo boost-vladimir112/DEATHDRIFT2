@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Linq;
+using YG;
 
 namespace PG
 {
@@ -32,7 +33,7 @@ namespace PG
                 //StartPositions = respawns.Select(r => r.transform).ToArray();
             }
 
-            int selectedCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
+            int selectedCarIndex = YG2.GetState("SelectedCar");
             Debug.Log($"Выбранная машина с индексом: {selectedCarIndex}");
 
             if (selectedCarIndex >= 0 && selectedCarIndex < CarPrefabs.Count)

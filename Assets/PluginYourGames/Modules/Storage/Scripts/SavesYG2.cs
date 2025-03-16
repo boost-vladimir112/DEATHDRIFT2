@@ -6,5 +6,7 @@ namespace YG
     {
         public int idSave;
         public int money = 0;
+        public int SelectedCar = 0;
+        public int[] carsOwned;
     }
 }
