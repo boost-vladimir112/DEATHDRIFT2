@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using YG;
 
 public class CarSelectionManager : MonoBehaviour
 {
@@ -13,14 +14,19 @@ public class CarSelectionManager : MonoBehaviour
     public Button actionButton;
     public TextMeshProUGUI actionButtonText;
     public TextMeshProUGUI priceText;
+
+    public int balance;
     
 
     private void Start()
     {
         selectedCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
         UpdateUI();
-        
-        PlayerPrefs.SetInt("Money", 5000);
+
+        YG2.SetState("money", 5000);
+        balance = YG2.GetState("money");
+        Debug.Log(balance);
+      
 
     }
 
@@ -45,11 +51,11 @@ public class CarSelectionManager : MonoBehaviour
         }
         else
         {
-            int money = PlayerPrefs.GetInt("Money", 0);
-            if (money >= carPrices[selectedCarIndex])
+          
+            if (balance >= carPrices[selectedCarIndex])
             {
-                money -= carPrices[selectedCarIndex];
-                PlayerPrefs.SetInt("Money", money);
+                balance -= carPrices[selectedCarIndex];
+                YG2.SetState("money", balance);
                 PlayerPrefs.SetInt("CarOwned_" + selectedCarIndex, 1);
             }
         }
