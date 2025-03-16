@@ -6,7 +6,7 @@ using YG;
 public class CarSelectionManager : MonoBehaviour
 {
     public GameObject[] cars; // Массив машин
-    public int[] carPrices = { 0, 500, 1000, 1500 }; // Цена машин (первая бесплатная)
+    public int[] carPrices; // Цена машин (первая бесплатная)
     private int selectedCarIndex = 0;
 
     public Button leftButton;
