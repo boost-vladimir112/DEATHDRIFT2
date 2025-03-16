@@ -16,6 +16,7 @@ public class CarSelectionManager : MonoBehaviour
     public GameObject selectText;
     public GameObject buyText;
     public TextMeshProUGUI priceText;
+    public GameObject pricePanel;
     public TextMeshProUGUI balanceText;
 
     public int balance;
@@ -90,6 +91,7 @@ public class CarSelectionManager : MonoBehaviour
         if (IsCarOwned(selectedCarIndex))
         {
             priceText.text = "";
+            pricePanel.SetActive(false);
 
             // Проверяем, выбрана ли она
             if (selectedCarIndex == YG2.saves.SelectedCar)
@@ -108,10 +110,11 @@ public class CarSelectionManager : MonoBehaviour
         else
         {
             // Машина не куплена
+            pricePanel.SetActive(true);
             actionButton.gameObject.SetActive(true);
             selectText.SetActive(false);
             buyText.SetActive(true);
-            priceText.text = " " + carPrices[selectedCarIndex];
+            priceText.text = "" + carPrices[selectedCarIndex];
         }
     }
 }
