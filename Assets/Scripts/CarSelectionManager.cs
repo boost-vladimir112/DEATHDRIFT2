@@ -31,7 +31,7 @@ public class CarSelectionManager : MonoBehaviour
         }
 
         selectedCarIndex = YG2.saves.SelectedCar;
-        balance = YG2.GetState("money");
+        balance = YG2.saves.money2;
         balanceText.text = balance.ToString();
 
 
@@ -65,8 +65,8 @@ public class CarSelectionManager : MonoBehaviour
             {
                 balance -= carPrices[selectedCarIndex];
                 balanceText.text = balance.ToString();
-                YG2.saves.money = balance;
-                YG2.SetState("money", balance);
+
+                YG2.saves.money2 = balance;
                 YG2.saves.carOwned.Add(selectedCarIndex);
                 YG2.saves.SelectedCar = selectedCarIndex; // После покупки сразу выбрать
             }
@@ -74,6 +74,7 @@ public class CarSelectionManager : MonoBehaviour
         YG2.SaveProgress();
         UpdateUI();
     }
+
 
     private bool IsCarOwned(int index)
     {

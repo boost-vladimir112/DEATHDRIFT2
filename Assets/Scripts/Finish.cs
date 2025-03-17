@@ -10,14 +10,14 @@ public class Finish : MonoBehaviour
     [SerializeField] private TextMeshProUGUI winText;
     [SerializeField] private GameObject winPanel;
 
-    [SerializeField] private int rewardForLevel = 120; // decide for 3
+    [SerializeField] private int rewardForLevel = 9000; // decide for 3
     [SerializeField] private TextMeshProUGUI rewardText;
 
     private int balance;
 
     private void Start()
     {
-        balance = YG2.GetState("money");
+        balance = YG2.GetState("money2");
         Debug.Log(balance);
     }
 
@@ -39,7 +39,8 @@ public class Finish : MonoBehaviour
 
                     balance += finalReward;
                     Debug.Log(balance);
-                    YG2.SetState("money",balance);
+                    YG2.saves.money2 = balance;
+                    YG2.SaveProgress();
 
                     winPanel.SetActive(true);
 

@@ -25,8 +25,9 @@ public class GetBonusMoney : MonoBehaviour
     private void Start()
     {
         // Загружаем баланс и бонус
-        bonusChecker = YG2.GetState("tgbonus");
-        balance = YG2.GetState("money");
+        bonusChecker = YG2.saves.tgbonus;
+        balance = YG2.saves.money2;
+        Debug.Log(balance);
         if (bonusChecker > 0)
         {
             hidenTextTG.SetActive(false);
@@ -80,11 +81,16 @@ public class GetBonusMoney : MonoBehaviour
         {
             balance += 800;
             balanceText.text = balance.ToString();
-            YG2.SetState("money", balance);
+            YG2.saves.money2 = balance;
+            
             bonusChecker++;
             hidenTextTG.SetActive(false);
-            YG2.SetState("tgbonus", bonusChecker);
+
+            YG2.saves.tgbonus = bonusChecker;
             YG2.SaveProgress();
+            // YG2.SetState("tgbonus", bonusChecker);
+
+
         }
     }
 
@@ -107,7 +113,8 @@ public class GetBonusMoney : MonoBehaviour
                 // Получение вознаграждения
                 balance += 300;
                 balanceText.text = balance.ToString();
-                YG2.SetState("money", balance);
+                YG2.saves.money2 = balance;
+                YG2.SaveProgress();
 
                 // Устанавливаем следующее доступное время (+1 час)
                 nextAvailableTime = DateTime.Now.AddHours(1);
@@ -128,7 +135,7 @@ public class GetBonusMoney : MonoBehaviour
     {
         if (canShowReward)
         {
-            timerText.text = "Бонус готов!";
+            //timerText.text = "Бонус готов!";
         }
         else
         {
@@ -139,7 +146,7 @@ public class GetBonusMoney : MonoBehaviour
             }
             else
             {
-                timerText.text = "Бонус готов!";
+             //   timerText.text = "Бонус готов!";
             }
         }
     }

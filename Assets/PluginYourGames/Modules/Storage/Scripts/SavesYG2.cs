@@ -7,7 +7,7 @@ namespace YG
     public partial class SavesYG
     {
         public int idSave;
-        public int money = 0;
+        public int money2;
         public int SelectedCar = 0;
         public List<int> carOwned = new List<int>();
         public int tgbonus = 0;
