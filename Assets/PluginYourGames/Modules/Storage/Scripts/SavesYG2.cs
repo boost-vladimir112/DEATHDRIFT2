@@ -10,5 +10,6 @@ namespace YG
         public int money = 0;
         public int SelectedCar = 0;
         public List<int> carOwned = new List<int>();
+        public int tgbonus = 0;
     }
 }
