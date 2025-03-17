@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/UniversalVehicleController/Scenes/Menu.unity
     guid: b4034083e1239b34584e91eca1efd527
   - enabled: 1
-    path: Assets/UniversalVehicleController/Scenes/PrototypeScene_RaceAI.unity
+    path: Assets/UniversalVehicleController/Scenes/Level2.unity
     guid: 8005b71dc9fcbf04ba9f64eebfaa279b
   - enabled: 1
     path: Assets/UniversalVehicleController/Scenes/PrototypeScene_CharacterController.unity
