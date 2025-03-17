@@ -368,7 +368,7 @@ MonoBehaviour:
     methodName: NameYourMethod
   RewardedAdv:
     rewardedAfterClosing: 1
-    skipInterAdvAfterReward: 0
+    skipInterAdvAfterReward: 1
     labelAdvSimLabel: 0
   ServerTime:
     serverTime: 1721201231000
