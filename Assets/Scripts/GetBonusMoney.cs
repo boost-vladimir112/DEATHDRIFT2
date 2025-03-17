@@ -36,6 +36,13 @@ public class GetBonusMoney : MonoBehaviour
             YG2.SetState("tgbonus", bonusChecker);
             YG2.SaveProgress();
         }
-        
+    }
+    public void OpenPanel()
+    {
+        bonusPanel.SetActive(true);
+    }
+    public void ClosePanel()
+    {
+        bonusPanel.SetActive(false);
     }
 }
