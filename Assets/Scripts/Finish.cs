@@ -44,7 +44,7 @@ public class Finish : MonoBehaviour
 
                     winPanel.SetActive(true);
 
-                    AudioListener.volume = 0;
+                    AudioListener.pause = true;
                     Time.timeScale = 0f;
 
 
