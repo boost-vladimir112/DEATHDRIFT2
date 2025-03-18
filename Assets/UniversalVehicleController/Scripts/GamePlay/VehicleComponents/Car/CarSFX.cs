@@ -88,7 +88,7 @@ namespace PG
                 }
             }
 
-            Car.BackFireAction += OnBackFire;
+            //Car.BackFireAction += OnBackFire;
             Car.OnStartEngineAction += StartEngine;
             Car.OnStopEngineAction += StopEngine;
 
