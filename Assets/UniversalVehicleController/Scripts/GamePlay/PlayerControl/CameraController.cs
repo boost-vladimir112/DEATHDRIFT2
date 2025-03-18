@@ -229,7 +229,8 @@ namespace PG
                 if (UserControl != null)
                 {
                     mouseDelta = UserControl.ViewDelta;
-                    ManualRotation = UserControl.ManualCameraRotation;
+                    ManualRotation = false;
+                    //ManualRotation = UserControl.ManualCameraRotation;
                 }
 
                 if (ManualRotation)
