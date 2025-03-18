@@ -10,7 +10,7 @@ public class Finish : MonoBehaviour
     [SerializeField] private TextMeshProUGUI winText;
     [SerializeField] private GameObject winPanel;
 
-    [SerializeField] private int rewardForLevel = 9000; // decide for 3
+    [SerializeField] private int rewardForLevel; // decide for 3
     [SerializeField] private TextMeshProUGUI rewardText;
 
     private int balance;
