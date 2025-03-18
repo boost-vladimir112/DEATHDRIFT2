@@ -104,8 +104,9 @@ namespace PG
         public void LoadMenuScene()
         {
             SceneManager.LoadScene(0);
-            AudioListener.pause = false ;
+            
             Time.timeScale = 1f;
+            AudioListener.pause = false;
         }
 
         public void ChangeTimeScale(float delta)
