@@ -4,7 +4,7 @@ using System.IO;
 
 public class OggToMp3Replacer : EditorWindow
 {
-    private string targetFolder = "Assets/UniversalVehicleController/ART/Sounds"; // Укажи свою папку здесь
+    private string targetFolder = "Assets/Audio"; // Укажи свою папку
 
     [MenuItem("Tools/Replace OGG with MP3")]
     public static void ShowWindow()
@@ -40,14 +40,27 @@ public class OggToMp3Replacer : EditorWindow
             string oggMetaPath = oggPath + ".meta";
             string mp3MetaPath = mp3Path + ".meta";
 
+            // Удаляем уже созданный mp3.meta, если существует
+            if (File.Exists(mp3MetaPath))
+            {
+                File.Delete(mp3MetaPath);
+                Debug.Log($"Deleted auto-created meta: {mp3MetaPath}");
+            }
+
+            // Переименовываем ogg.meta -> mp3.meta
             if (File.Exists(oggMetaPath))
             {
                 File.Move(oggMetaPath, mp3MetaPath);
+                Debug.Log($"Meta replaced: {oggMetaPath} -> {mp3MetaPath}");
+            }
+            else
+            {
+                Debug.LogWarning($"No meta found for: {oggPath}");
             }
 
-            // Delete the original OGG file
+            // Удаляем сам .ogg файл
             File.Delete(oggPath);
-            Debug.Log($"Replaced: {oggPath} -> {mp3Path}");
+            Debug.Log($"Deleted OGG: {oggPath}");
         }
 
         AssetDatabase.Refresh();
