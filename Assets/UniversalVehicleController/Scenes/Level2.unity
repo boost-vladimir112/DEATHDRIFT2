@@ -5995,6 +5995,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -70
       objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438222, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438225, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6102,7 +6110,7 @@ PrefabInstance:
     - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: ButtonScenes.Array.data[0].Scene.SceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: cdfcdadea2ad74f4682a592cce9aae76, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2220089318257438227, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: ButtonScenes.Array.data[10].Scene.SceneName
       value: PrototypeScene_CharacterController
