@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/UniversalVehicleController/Scenes/Level3.unity
     guid: 48945045f9a67c74288f33c1106231e8
   - enabled: 1
+    path: Assets/UniversalVehicleController/Scenes/Level4.unity
+    guid: 34a39d9abcffca74f94b880eaf9f302d
+  - enabled: 1
     path: Assets/UniversalVehicleController/Scenes/PrototypeScene_CharacterController.unity
     guid: 8059412356e4b8a4984ebfc5cd3e114a
   m_configObjects: {}
