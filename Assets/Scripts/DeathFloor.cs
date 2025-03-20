@@ -15,5 +15,9 @@ public class DeathFloor : MonoBehaviour
             AudioListener.pause = true;
             Time.timeScale = 0f;
         }
+        if(other.CompareTag("Car"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

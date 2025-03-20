@@ -3899,7 +3899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defeat
+  m_text: "\u3042\u306A\u305F\u306E\u8CA0\u3051"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a4ebadeee4b478e418b5c0c29208e2ac, type: 2}
   m_sharedMaterial: {fileID: -3329488656905203394, guid: a4ebadeee4b478e418b5c0c29208e2ac, type: 2}
@@ -3926,12 +3926,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120.65
+  m_fontSize: 120
   m_fontSizeBase: 120.65
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 120
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
