@@ -2698,6 +2698,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1788374287086155854, guid: 5549b60b9fa75664c97c24524fbf94c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3514327621164107396, guid: 5549b60b9fa75664c97c24524fbf94c2, type: 3}
       propertyPath: m_Name
       value: PG86_Stock 1
@@ -3614,6 +3618,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1788374287086155854, guid: 7ab519218cad86c4a943bbacef9d966a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3514327621164107396, guid: 7ab519218cad86c4a943bbacef9d966a, type: 3}
       propertyPath: m_Name
       value: PG86_Stock
