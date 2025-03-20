@@ -262,7 +262,7 @@ namespace PG
                 TurboSource.pitch = Mathf.Lerp (MinTurboPith, MaxTurboPith, Car.CurrentTurbo);
                 if (Car.CurrentTurbo > 0.2f && (Car.CurrentAcceleration < 0.2f || Car.InChangeGear) && ((Time.realtimeSinceStartup - LastBlowOffTime) > MinTimeBetweenBlowOffSounds))
                 {
-                    OtherEffectsSource.PlayOneShot (TurboBlowOffClip, Car.CurrentTurbo * MaxBlowOffVolume);
+                   // OtherEffectsSource.PlayOneShot (TurboBlowOffClip, Car.CurrentTurbo * MaxBlowOffVolume);
                     LastBlowOffTime = Time.realtimeSinceStartup;
                 }
             }
