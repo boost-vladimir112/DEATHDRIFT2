@@ -93867,7 +93867,7 @@ MonoBehaviour:
   SteerWheelMaxAngle: 120
   SteerWheel: {fileID: 5089525633460550539}
   StartEngineInAwake: 0
-  StartEngineDellay: 1.5
+  StartEngineDellay: 0.5
   Engine:
     MaxMotorTorque: 600
     MotorTorqueFromRpmCurve:
