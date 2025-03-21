@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MyLevelManager : MonoBehaviour
 {
-    [SerializeField] private GameObject gamePanel;
+    [SerializeField] private GameObject gamePanel = null;
+    [SerializeField] private int level = 1;
     public void OpenPanel()
     {
         gamePanel.SetActive(true);
@@ -15,7 +16,7 @@ public class MyLevelManager : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(level);
     }
 
 }

@@ -3,12 +3,15 @@ using UnityEngine;
 using TMPro;
 using PG;
 using YG;
+using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
     private List<GameObject> finishedCars = new List<GameObject>(); // Очередность машин на финише
     [SerializeField] private TextMeshProUGUI winText;
     [SerializeField] private GameObject winPanel;
+    private int level;
+    private int currentLevel;
 
     [SerializeField] private int rewardForLevel; // decide for 3
     [SerializeField] private TextMeshProUGUI rewardText;
@@ -17,7 +20,9 @@ public class Finish : MonoBehaviour
 
     private void Start()
     {
-        balance = YG2.GetState("money2");
+        currentLevel = SceneManager.loadedSceneCount;
+        balance = YG2.saves.money2;
+        level = YG2.saves.level;
         Debug.Log(balance);
     }
 
@@ -36,7 +41,13 @@ public class Finish : MonoBehaviour
 
                     int finalReward = rewardForLevel / position;
                     rewardText.text = finalReward.ToString();
-
+                    if(level < currentLevel)
+                    {
+                        level = currentLevel+1;
+                        YG2.saves.level = level;
+                        //YG2.SaveProgress();
+                    }
+   
                     balance += finalReward;
                     Debug.Log(balance);
                     YG2.saves.money2 = balance;
