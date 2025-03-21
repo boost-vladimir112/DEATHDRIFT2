@@ -3453,7 +3453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winText: {fileID: 1069582258}
   winPanel: {fileID: 1424807680}
-  rewardForLevel: 600
+  rewardForLevel: 300
   rewardText: {fileID: 1554982850}
 --- !u!1 &1449103646
 GameObject:
@@ -5765,7 +5765,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -173.5979, y: 6.6, z: -123.6146}
-  m_LocalScale: {x: -5.8026085, y: 14.225894, z: 35.170162}
+  m_LocalScale: {x: 5.802608, y: 14.225894, z: 35.170162}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1342170832}

@@ -3391,7 +3391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winText: {fileID: 1069582258}
   winPanel: {fileID: 1424807680}
-  rewardForLevel: 900
+  rewardForLevel: 600
   rewardText: {fileID: 1554982850}
 --- !u!1 &1449103646
 GameObject:
