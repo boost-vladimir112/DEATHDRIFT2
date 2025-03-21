@@ -110,6 +110,13 @@ namespace PG
             Time.timeScale = 1f;
             AudioListener.pause = false;
         }
+        public void NextScene()
+        {
+            YG2.InterstitialAdvShow();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            AudioListener.pause = false;
+            Time.timeScale = 1f;
+        }
 
         public void ChangeTimeScale(float delta)
         {
