@@ -20,7 +20,7 @@ public class Finish : MonoBehaviour
 
     private void Start()
     {
-        currentLevel = SceneManager.loadedSceneCount;
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
         balance = YG2.saves.money2;
         level = YG2.saves.level;
         Debug.Log(balance);
@@ -41,11 +41,11 @@ public class Finish : MonoBehaviour
 
                     int finalReward = rewardForLevel / position;
                     rewardText.text = finalReward.ToString();
-                    if(level < currentLevel)
+                    if(level <= currentLevel)
                     {
-                        level = currentLevel+1;
+                        level = currentLevel;
                         YG2.saves.level = level;
-                        //YG2.SaveProgress();
+                        YG2.SaveProgress();
                     }
    
                     balance += finalReward;
