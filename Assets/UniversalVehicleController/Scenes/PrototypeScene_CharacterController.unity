@@ -5642,6 +5642,54 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[7].Scene.SceneName
+      value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[0].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[1].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[2].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[3].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[4].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[5].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[6].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[9].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[10].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[11].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: ButtonScenes.Array.data[12].Scene.SceneAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2620672743816008707, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5952,6 +6000,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8681063755223632184, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931531146585472164, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
