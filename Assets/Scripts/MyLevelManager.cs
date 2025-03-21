@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class MyLevelManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class MyLevelManager : MonoBehaviour
 
     public void LoadLevel()
     {
+        YG2.InterstitialAdvShow();
         SceneManager.LoadScene(level);
     }
 

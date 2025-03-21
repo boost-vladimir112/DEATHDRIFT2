@@ -97,12 +97,14 @@ namespace PG
 
         public void RestartScene()
         {
+            YG2.InterstitialAdvShow();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             AudioListener.pause = false;
             Time.timeScale = 1f;
         }
         public void LoadMenuScene()
         {
+            YG2.InterstitialAdvShow();
             SceneManager.LoadScene(0);
             
             Time.timeScale = 1f;
