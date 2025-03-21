@@ -13,12 +13,13 @@
     false,
     false
   ],
-  "idSave": 5,
-  "money2": 1500,
+  "idSave": 7,
+  "money2": 0,
   "level": 2,
   "SelectedCar": 0,
   "carOwned": [
-    0
+    0,
+    1
   ],
   "tgbonus": 0
 }
