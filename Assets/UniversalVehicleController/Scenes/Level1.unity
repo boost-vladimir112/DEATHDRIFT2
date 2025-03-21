@@ -1605,8 +1605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.679016, y: 379.592}
-  m_SizeDelta: {x: -1250.876, y: -848.108}
+  m_AnchoredPosition: {x: 10.679016, y: 377.89517}
+  m_SizeDelta: {x: -1250.876, y: -844.714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637662993
 MonoBehaviour:
@@ -6251,10 +6251,12 @@ MonoBehaviour:
       hi: 
   text: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435: \u0426\u0424\u042B\u0412\n\u041F\u0440\u043E\u0431\u0435\u043B
     - \u0442\u043E\u0440\u043C\u043E\u0437\n\u0428\u0438\u0444\u0442 - \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435\n\u0421
-    - \u0441\u043C\u0435\u043D\u0430 \u043A\u0430\u043C\u0435\u0440\u044B\n\n"
+    - \u0441\u043C\u0435\u043D\u0430 \u043A\u0430\u043C\u0435\u0440\u044B\n\u041A
+    - \u043F\u0435\u0440\u0435\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043C\u0430\u0448\u0438\u043D\u0443\n"
   ru: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435: \u0426\u0424\u042B\u0412\n\u041F\u0440\u043E\u0431\u0435\u043B
     - \u0442\u043E\u0440\u043C\u043E\u0437\n\u0428\u0438\u0444\u0442 - \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435\n\u0421
-    - \u0441\u043C\u0435\u043D\u0430 \u043A\u0430\u043C\u0435\u0440\u044B"
+    - \u0441\u043C\u0435\u043D\u0430 \u043A\u0430\u043C\u0435\u0440\u044B\n\u041A
+    - \u043F\u0435\u0440\u0435\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043C\u0430\u0448\u0438\u043D\u0443"
   en: 'Movement: WASD
 
     Spacebar - brake
@@ -6262,7 +6264,9 @@ MonoBehaviour:
     Shift - acceleration
 
     C - camera
-    change'
+    change
+
+    R - turn the car over'
   tr: 
   az: 
   be: 
@@ -6285,7 +6289,8 @@ MonoBehaviour:
   ar: 
   id: 
   ja: "\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\uFF1A WASD\n\u30B9\u30DA\u30FC\u30B9\u30D0\u30FC
-    - \u30D6\u30EC\u30FC\u30AD\n\u30B7\u30D5\u30C8 - \u52A0\u901F\nC - \u30AB\u30E1\u30E9\u5909\u66F4"
+    - \u30D6\u30EC\u30FC\u30AD\n\u30B7\u30D5\u30C8 - \u52A0\u901F\nC - \u30AB\u30E1\u30E9\u5909\u66F4\nR
+    - \u30D5\u30EA\u30C3\u30D7\u30FB\u30AB\u30FC"
   it: 
   de: 
   hi: 
@@ -6319,7 +6324,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435: \u0426\u0424\u042B\u0412\n\u041F\u0440\u043E\u0431\u0435\u043B
     - \u0442\u043E\u0440\u043C\u043E\u0437\n\u0428\u0438\u0444\u0442 - \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435\n\u0421
-    - \u0441\u043C\u0435\u043D\u0430 \u043A\u0430\u043C\u0435\u0440\u044B\n\n"
+    - \u0441\u043C\u0435\u043D\u0430 \u043A\u0430\u043C\u0435\u0440\u044B\n\u041A
+    - \u043F\u0435\u0440\u0435\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043C\u0430\u0448\u0438\u043D\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a4ebadeee4b478e418b5c0c29208e2ac, type: 2}
   m_sharedMaterial: {fileID: -3329488656905203394, guid: a4ebadeee4b478e418b5c0c29208e2ac, type: 2}
@@ -6346,8 +6352,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
-  m_fontSizeBase: 38
+  m_fontSize: 37
+  m_fontSizeBase: 37
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
