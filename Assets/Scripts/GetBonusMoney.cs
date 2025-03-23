@@ -9,6 +9,8 @@ public class GetBonusMoney : MonoBehaviour
 {
     public string rewardID;
 
+    [SerializeField] private CarSelectionManager carSelectionManager;
+
     [SerializeField] GameObject bonusPanel;
     [SerializeField] GameObject hidenTextTG;
     private int balance;
@@ -90,6 +92,7 @@ public class GetBonusMoney : MonoBehaviour
             YG2.SaveProgress();
             // YG2.SetState("tgbonus", bonusChecker);
 
+            carSelectionManager.UpdateBalance();
 
         }
     }
@@ -102,6 +105,7 @@ public class GetBonusMoney : MonoBehaviour
     public void ClosePanel()
     {
         bonusPanel.SetActive(false);
+
     }
 
     public void MyRewardAdvShow()
@@ -123,6 +127,7 @@ public class GetBonusMoney : MonoBehaviour
 
                 canShowReward = false;
                 UpdateTimerUI();
+                carSelectionManager.UpdateBalance();
             });
         }
         else

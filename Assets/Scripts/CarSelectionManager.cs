@@ -50,7 +50,11 @@ public class CarSelectionManager : MonoBehaviour
         if (selectedCarIndex < 0) selectedCarIndex = cars.Length - 1;
         UpdateUI();
     }
-
+    public void UpdateBalance ()
+    {
+        balance = YG2.saves.money2;
+        balanceText.text = balance.ToString();
+    }
     public void OnActionButtonClick()
     {
         if (IsCarOwned(selectedCarIndex))

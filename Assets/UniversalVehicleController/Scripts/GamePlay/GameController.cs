@@ -24,6 +24,7 @@ namespace PG
 
         void Start()
         {
+            AudioListener.pause = false;
             if (TimeScaleText)
                 TimeScaleText.SetActive(false);
 
@@ -99,7 +100,7 @@ namespace PG
         {
             YG2.InterstitialAdvShow();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            AudioListener.pause = false;
+          //  AudioListener.pause = false;
             Time.timeScale = 1f;
         }
         public void LoadMenuScene()
@@ -108,14 +109,15 @@ namespace PG
             SceneManager.LoadScene(0);
             
             Time.timeScale = 1f;
-            AudioListener.pause = false;
+           // AudioListener.pause = false;
         }
         public void NextScene()
         {
             YG2.InterstitialAdvShow();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-            AudioListener.pause = false;
+            
             Time.timeScale = 1f;
+           // AudioListener.pause = false;
         }
 
         public void ChangeTimeScale(float delta)
