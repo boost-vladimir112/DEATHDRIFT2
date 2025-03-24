@@ -42408,6 +42408,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6774275468315011811}
     m_Modifications:
+    - target: {fileID: 329149070632088849, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 396549946811724290, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 701613814325681869, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.537
+      objectReference: {fileID: 0}
     - target: {fileID: 724320323333057329, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -42455,6 +42467,22 @@ PrefabInstance:
     - target: {fileID: 724320323333057330, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
       propertyPath: m_Name
       value: MotorbikeSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852755024238769284, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791731342564992998, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031398650567301086, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169589558351735126, guid: 6eb93bf45eaffca48b77ca2c4b88db7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.537
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
