@@ -23,8 +23,17 @@ namespace PG
         List<VehicleController> AllVehicles = new List<VehicleController>();
 
         void Start()
-        {
-            AudioListener.pause = false;
+        { 
+
+            if (SoundToggle.IsSoundEnabled())
+            {
+                AudioListener.pause = false;
+            }
+            else
+            {
+                AudioListener.pause = true;
+            }
+            
             if (TimeScaleText)
                 TimeScaleText.SetActive(false);
 
