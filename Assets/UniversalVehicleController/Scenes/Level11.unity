@@ -146,6 +146,10 @@ PrefabInstance:
       value: Directional Light
       objectReference: {fileID: 0}
     - target: {fileID: 6061423950708121370, guid: a397c6112b1bd2e42aaaa0dc5f17adbc, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061423950708121370, guid: a397c6112b1bd2e42aaaa0dc5f17adbc, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
