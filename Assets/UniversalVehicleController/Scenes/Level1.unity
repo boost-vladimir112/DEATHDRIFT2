@@ -4306,6 +4306,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: de
+      value: "Management: WASD\nDie L\xFCcke ist eine Bremse\nVerschiebung - Beschleunigung\nC
+        - Kamerawechsel\nK - das Auto drehen"
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: es
+      value: "Gesti\xF3n: WASD\nLa brecha es un freno\nShift - Aceleraci\xF3n\nC
+        - Cambio de c\xE1mara\nK - Gira el coche"
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: fr
+      value: "Gestion: WASD\nL'\xE9cart est un frein\nShift - Acc\xE9l\xE9ration\nC
+        - Changement de la cam\xE9ra\nK - Tournez la voiture"
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: id
+      value: 'Manajemen: WASD
+
+        Kesenjangannya adalah rem
+
+        Shift -
+        Akselerasi
+
+        C - Perubahan Kamera
+
+        K - Putar mobil'
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: it
+      value: "Gestione: WASD\nIl divario \xE8 un freno\nShift - Accelerazione\nC
+        - cambio della fotocamera\nK - gira la macchina"
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: pt
+      value: "Gerenciamento: WASD\nA lacuna \xE9 um freio\nMudan\xE7a - acelera\xE7\xE3o\nC
+        - mudan\xE7a de c\xE2mera\nK - gire o carro"
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: tr
+      value: "Y\xF6netim: WASD\nBo\u015Fluk bir fren\nVardiya - H\u0131zlanma\nC
+        - Kamera De\u011Fi\u015Fimi\nK - Arabay\u0131 \xE7evir"
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: countLang
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 612937556590541253, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: processTranslateLabel
+      value: 7/10 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535970, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_Name
       value: GameController_WithCarSelector
