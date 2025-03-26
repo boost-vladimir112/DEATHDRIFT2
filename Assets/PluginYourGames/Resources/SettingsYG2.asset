@@ -81,7 +81,7 @@ MonoBehaviour:
       hi: []
     fontsTMP:
       defaultFont:
-      - {fileID: 11400000, guid: f3f9b5a6a129c344c8abbf5cad271eca, type: 2}
+      - {fileID: 11400000, guid: c89b298d4f140b646b0948ea401b7b2f, type: 2}
       ru: []
       en: []
       tr: []
