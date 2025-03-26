@@ -37022,8 +37022,8 @@ MonoBehaviour:
     TargetCutOffRPM: 6000
     CutOffTime: 0.05
     EnableTurbo: 1
-    TurboIncreaseSpeed: 4
-    TurboDecreaseSpeed: 9
+    TurboIncreaseSpeed: 3
+    TurboDecreaseSpeed: 10
     TurboAdditionalTorque: 0.2
     EnableBoost: 1
     BoostAmount: 5

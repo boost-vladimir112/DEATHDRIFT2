@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using YG;
-using System.Collections.Generic;
 
 public class CarSelectionManager : MonoBehaviour
 {
@@ -13,27 +12,26 @@ public class CarSelectionManager : MonoBehaviour
     public Button leftButton;
     public Button rightButton;
     public Button actionButton;
+    public Button tgSubscribeButton; // Кнопка подписки
     public GameObject selectText;
-    public GameObject buyText;
     public TextMeshProUGUI priceText;
     public GameObject pricePanel;
     public TextMeshProUGUI balanceText;
 
     public int balance;
+    public int carFromTGIndex = 3; // Индекс машины за подписку
 
     private void Start()
     {
-        // Если лист пустой (первый запуск), открыть первую машину
         if (YG2.saves.carOwned.Count == 0)
         {
-            YG2.saves.carOwned.Add(0); // Первая бесплатная
+            YG2.saves.carOwned.Add(0);
             YG2.SaveProgress();
         }
 
         selectedCarIndex = YG2.saves.SelectedCar;
         balance = YG2.saves.money2;
         balanceText.text = balance.ToString();
-
 
         UpdateUI();
     }
@@ -50,21 +48,21 @@ public class CarSelectionManager : MonoBehaviour
         if (selectedCarIndex < 0) selectedCarIndex = cars.Length - 1;
         UpdateUI();
     }
-    public void UpdateBalance ()
+
+    public void UpdateBalance()
     {
         balance = YG2.saves.money2;
         balanceText.text = balance.ToString();
     }
+
     public void OnActionButtonClick()
     {
-        if (IsCarOwned(selectedCarIndex))
+        if (IsCarOwned(selectedCarIndex) || IsCarFromTG(selectedCarIndex))
         {
-            // Устанавливаем выбранную машину
             YG2.saves.SelectedCar = selectedCarIndex;
         }
         else
         {
-            // Покупка машины
             if (balance >= carPrices[selectedCarIndex])
             {
                 balance -= carPrices[selectedCarIndex];
@@ -72,17 +70,21 @@ public class CarSelectionManager : MonoBehaviour
 
                 YG2.saves.money2 = balance;
                 YG2.saves.carOwned.Add(selectedCarIndex);
-                YG2.saves.SelectedCar = selectedCarIndex; // После покупки сразу выбрать
+                YG2.saves.SelectedCar = selectedCarIndex;
             }
         }
         YG2.SaveProgress();
         UpdateUI();
     }
 
-
     private bool IsCarOwned(int index)
     {
         return YG2.saves.carOwned.Contains(index);
+    }
+
+    private bool IsCarFromTG(int index)
+    {
+        return index == carFromTGIndex && YG2.saves.carFromTG;
     }
 
     private void UpdateUI()
@@ -92,34 +94,35 @@ public class CarSelectionManager : MonoBehaviour
             cars[i].SetActive(i == selectedCarIndex);
         }
 
-        // Проверяем, принадлежит ли машина
-        if (IsCarOwned(selectedCarIndex))
+        if (IsCarOwned(selectedCarIndex) || IsCarFromTG(selectedCarIndex))
         {
             priceText.text = "";
             pricePanel.SetActive(false);
-
-            // Проверяем, выбрана ли она
-            if (selectedCarIndex == YG2.saves.SelectedCar)
-            {
-                // Машина выбрана — убираем кнопку
-                actionButton.gameObject.SetActive(false);
-            }
-            else
-            {
-                // Машина открыта, но не выбрана
-                actionButton.gameObject.SetActive(true);
-                selectText.SetActive(true);
-                buyText.SetActive(false);
-            }
+            actionButton.gameObject.SetActive(selectedCarIndex != YG2.saves.SelectedCar);
+            selectText.SetActive(selectedCarIndex != YG2.saves.SelectedCar);
+            tgSubscribeButton.gameObject.SetActive(false); // Прячем кнопку подписки
         }
         else
         {
-            // Машина не куплена
             pricePanel.SetActive(true);
             actionButton.gameObject.SetActive(true);
             selectText.SetActive(false);
-            buyText.SetActive(true);
-            priceText.text = "" + carPrices[selectedCarIndex];
+            priceText.text = carPrices[selectedCarIndex].ToString();
+
+            // Если выбрана машина за Telegram, показываем кнопку подписки
+            tgSubscribeButton.gameObject.SetActive(selectedCarIndex == carFromTGIndex);
         }
+    }
+
+    public void UnlockCarFromTG()
+    {
+        YG2.saves.carFromTG = true;
+        YG2.SaveProgress();
+        UpdateUI();
+    }
+
+    public void OpenTelegramLink()
+    {
+        Application.OpenURL("https://t.me/tsukuyomi05"); // Ссылка на ваш канал
     }
 }
