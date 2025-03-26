@@ -1478,7 +1478,7 @@ Transform:
   m_GameObject: {fileID: 611875667}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08313146, y: -0.03684589, z: -0.0052773547, w: 0.99584323}
-  m_LocalPosition: {x: -150.7, y: 2, z: -65.1}
+  m_LocalPosition: {x: -148.2, y: 7.6, z: -98.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3597,11 +3597,11 @@ MonoBehaviour:
   - Point: {fileID: 611875668}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
-    SpeedLimit: 150
+    SpeedLimit: 20
   - Point: {fileID: 1952122607}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
-    SpeedLimit: 150
+    SpeedLimit: 80
   - Point: {fileID: 577733355}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5

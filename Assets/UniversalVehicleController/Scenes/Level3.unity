@@ -4026,11 +4026,11 @@ MonoBehaviour:
   - Point: {fileID: 611875668}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
-    SpeedLimit: 150
+    SpeedLimit: 15
   - Point: {fileID: 1952122607}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
-    SpeedLimit: 130
+    SpeedLimit: 80
   - Point: {fileID: 577733355}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
@@ -4038,7 +4038,7 @@ MonoBehaviour:
   - Point: {fileID: 314353489}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
-    SpeedLimit: 100
+    SpeedLimit: 80
   - Point: {fileID: 1762206279}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
@@ -4046,11 +4046,11 @@ MonoBehaviour:
   - Point: {fileID: 729914355}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
-    SpeedLimit: 120
+    SpeedLimit: 90
   - Point: {fileID: 859654443}
     OvertakeZoneLeft: 5
     OvertakeZoneRight: 5
-    SpeedLimit: 150
+    SpeedLimit: 120
   ShowGizmo: 1
   EditorVisualisationSubsteps: 2
   ShowOvertakeGizmo: 1
