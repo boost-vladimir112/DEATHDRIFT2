@@ -2836,6 +2836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController_WithCarSelector
       objectReference: {fileID: 0}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: StartPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 279453262}
     - target: {fileID: 3252014629734535972, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

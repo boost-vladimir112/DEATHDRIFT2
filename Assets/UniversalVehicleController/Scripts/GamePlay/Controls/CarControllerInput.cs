@@ -415,14 +415,31 @@ namespace PG
             }
         }
 
-        public void ResetCar ()
+        private bool canUseVehicleAction = true;
+        private float cooldownTime = 2f; // Общий кулдаун для обеих функций
+
+        public void ResetCar()
         {
-            Vehicle.ResetVehicle ();
+            if (!canUseVehicleAction) return; // Если кулдаун активен, выходим
+
+            canUseVehicleAction = false; // Запрещаем повторный вызов
+            Vehicle.ResetVehicle();
+            StartCoroutine(VehicleActionCooldown());
         }
 
-        public void RestoreCar ()
+        public void RestoreCar()
         {
-            Vehicle.RestoreVehicle ();
+            if (!canUseVehicleAction) return; // Если кулдаун активен, выходим
+
+            canUseVehicleAction = false; // Запрещаем повторный вызов
+            Vehicle.RestoreVehicle();
+            StartCoroutine(VehicleActionCooldown());
+        }
+
+        private IEnumerator VehicleActionCooldown()
+        {
+            yield return new WaitForSeconds(cooldownTime);
+            canUseVehicleAction = true; // После задержки снова можно использовать функции
         }
 
         public void ChangeView ()
