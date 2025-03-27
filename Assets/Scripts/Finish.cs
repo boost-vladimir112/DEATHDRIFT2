@@ -24,6 +24,14 @@ public class Finish : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.GetInt("SoundEnabled") == 1)
+        {
+            AudioListener.pause = false;
+        }
+        else
+        {
+            AudioListener.pause = true;
+        }
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         balance = YG2.saves.money2;
         level = YG2.saves.level;
@@ -59,6 +67,7 @@ public class Finish : MonoBehaviour
                     YG2.SaveProgress();
 
                     winPanel.SetActive(true);
+                    
                     AudioListener.pause = true;
                     Time.timeScale = 0f;
 
