@@ -21,8 +21,11 @@ public class CarSelectionManager : MonoBehaviour
     public int balance;
     public int carFromTGIndex = 3; // Индекс машины за подписку
 
+    private int playerRating;
+
     private void Start()
     {
+        playerRating = YG2.saves.playerRating;
         if (YG2.saves.carOwned.Count == 0)
         {
             YG2.saves.carOwned.Add(0);
@@ -67,6 +70,10 @@ public class CarSelectionManager : MonoBehaviour
             {
                 balance -= carPrices[selectedCarIndex];
                 balanceText.text = balance.ToString();
+
+                playerRating += 10+selectedCarIndex;
+                YG2.saves.playerRating = playerRating;
+                YG2.SetLeaderboard("rating", playerRating);
 
                 YG2.saves.money2 = balance;
                 YG2.saves.carOwned.Add(selectedCarIndex);
