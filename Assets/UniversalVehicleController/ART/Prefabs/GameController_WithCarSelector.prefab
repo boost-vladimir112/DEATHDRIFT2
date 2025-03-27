@@ -852,9 +852,10 @@ GameObject:
   - component: {fileID: 4601286637723820271}
   - component: {fileID: 8896816941367179537}
   - component: {fileID: 723976724610456968}
+  - component: {fileID: 2731534558380043377}
   m_Layer: 5
   m_Name: MultiplyButton
-  m_TagString: Untagged
+  m_TagString: RewardButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -974,6 +975,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2731534558380043377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903115648294321699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db8db82046f74014fa3aeb90afe71939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &937428702001155184
 GameObject:
   m_ObjectHideFlags: 0
