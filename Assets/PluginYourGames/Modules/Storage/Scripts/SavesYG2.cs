@@ -13,5 +13,6 @@ namespace YG
         public List<int> carOwned = new List<int>();
         public int tgbonus = 0;
         public bool carFromTG;
+        public int playerRating;
     }
 }
