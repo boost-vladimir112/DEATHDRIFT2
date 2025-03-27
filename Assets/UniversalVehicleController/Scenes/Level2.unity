@@ -1384,17 +1384,6 @@ Transform:
   - {fileID: 1342170832}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1069582258 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 887718498312706275, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-  m_PrefabInstance: {fileID: 3252014628470532736}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1113121246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,11 +1850,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387462101}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1424807680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2914350126058429038, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-  m_PrefabInstance: {fileID: 3252014628470532736}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1430409813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,26 +1925,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71a4a44f67886b4b94aed22f30aa0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winText: {fileID: 1069582258}
-  winPanel: {fileID: 1424807680}
+  winText: {fileID: 0}
+  winPanel: {fileID: 0}
   rewardForLevel: 600
-  rewardText: {fileID: 1554982850}
---- !u!1 &1549910243 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1821183164846685297, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-  m_PrefabInstance: {fileID: 3252014628470532736}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1554982850 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2612120056134052302, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-  m_PrefabInstance: {fileID: 3252014628470532736}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  rewardRating: 0
+  rewardRatingText: {fileID: 0}
+  rewardText: {fileID: 0}
 --- !u!1 &1571122447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,7 +2737,7 @@ PrefabInstance:
     - target: {fileID: 9114895116307077445, guid: f572ff05d8ebd5544baa8bb72eedba94, type: 3}
       propertyPath: LosePanel
       value: 
-      objectReference: {fileID: 1549910243}
+      objectReference: {fileID: 3252014628470532737}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2961,6 +2931,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+--- !u!1 &3252014628470532737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4852054028038816061, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+  m_PrefabInstance: {fileID: 3252014628470532736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4689187838987670725
 Transform:
   m_ObjectHideFlags: 0

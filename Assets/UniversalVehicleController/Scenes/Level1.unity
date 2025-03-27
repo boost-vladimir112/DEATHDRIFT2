@@ -4246,10 +4246,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 901861078779190828, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535970, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_Name
       value: GameController_WithCarSelector

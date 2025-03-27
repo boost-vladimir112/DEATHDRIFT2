@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47538f37d24fedc40a78c28a72b957cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LosePanel: {fileID: 0}
+  LosePanel: {fileID: 3252014628470532737}
 --- !u!1 &141105978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2454,8 @@ MonoBehaviour:
   winText: {fileID: 0}
   winPanel: {fileID: 0}
   rewardForLevel: 2100
+  rewardRating: 0
+  rewardRatingText: {fileID: 0}
   rewardText: {fileID: 0}
 --- !u!1 &1448882117
 GameObject:
@@ -3992,6 +3994,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+--- !u!1 &3252014628470532737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4852054028038816061, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+  m_PrefabInstance: {fileID: 3252014628470532736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4689187838987670725
 Transform:
   m_ObjectHideFlags: 0
