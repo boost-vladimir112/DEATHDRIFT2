@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    public string rewardID = "multiply";
+
     private List<GameObject> finishedCars = new List<GameObject>(); // Очередность машин на финише
     [SerializeField] private TextMeshProUGUI winText;
     [SerializeField] private GameObject winPanel;
@@ -14,6 +16,7 @@ public class Finish : MonoBehaviour
     private int level;
     private int currentLevel;
     private int position;
+    private int finalReward;
 
     [SerializeField] private int rewardForLevel; // decide for 3
     [SerializeField] private int rewardRating;
@@ -85,10 +88,19 @@ public class Finish : MonoBehaviour
     }
     private void NewBalance()
     {
-        int finalReward = rewardForLevel / position;
+        finalReward = rewardForLevel / position;
         rewardText.text = finalReward.ToString();
         balance += finalReward;
         Debug.Log(balance);
         YG2.saves.money2 = balance;
+    }
+    public void RewardMultiply()
+    {
+        YG2.RewardedAdvShow(rewardID, () =>
+        {
+            balance += finalReward;
+            YG2.saves.money2 = balance;
+            YG2.SaveProgress();
+        });
     }
 }

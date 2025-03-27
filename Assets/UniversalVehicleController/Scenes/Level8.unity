@@ -2528,6 +2528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71a4a44f67886b4b94aed22f30aa0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rewardID: multiply
   winText: {fileID: 3252014628470532738}
   winPanel: {fileID: 3252014628470532739}
   rewardForLevel: 1500
@@ -3671,6 +3672,14 @@ PrefabInstance:
     - target: {fileID: 486573782093654051, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 723976724610456968, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1430409818}
+    - target: {fileID: 723976724610456968, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RewardMultiply
       objectReference: {fileID: 0}
     - target: {fileID: 1404350736093119634, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_LocalPosition.z
