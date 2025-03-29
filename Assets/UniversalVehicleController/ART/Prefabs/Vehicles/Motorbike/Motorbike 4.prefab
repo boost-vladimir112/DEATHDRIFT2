@@ -30594,7 +30594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a43fd575a4f3b124a994e5c934a4b4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageFactor: 1
+  DamageFactor: 0.8
   MaxCollisionMagnitude: 100
   MaxImpulseMagnitude: 35
   MaxDeformRadiusInMaxMag: 3
