@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -73,18 +74,21 @@ public class Finish : MonoBehaviour
 
     private void NewRatingRecord()
     {
-        playerRating += rewardRating / position;
-        rewardRatingText.text = (rewardRating / position).ToString();
+        int ratingIncrease = rewardRating / position; // Считаем, сколько дадим рейтинга
+        playerRating += ratingIncrease; // Обновляем рейтинг игрока в памяти
+
         YG2.saves.playerRating = playerRating;
         YG2.SetLeaderboard("rating", playerRating);
+
+        StartCoroutine(AnimateRatingIncrease(ratingIncrease)); // Запускаем анимацию
     }
+
 
     private void NewBalance()
     {
         finalReward = rewardForLevel / position;
         rewardText.text = finalReward.ToString();
-        balance += finalReward;
-        YG2.saves.money2 = balance;
+        StartCoroutine(AnimateMoneyIncrease(finalReward)); // Запускаем анимацию увеличения денег
     }
 
     public void RewardMultiply()
@@ -93,8 +97,7 @@ public class Finish : MonoBehaviour
 
         YG2.RewardedAdvShow(rewardID, () =>
         {
-            balance += finalReward;
-            YG2.saves.money2 = balance;
+            StartCoroutine(AnimateMoneyIncrease(finalReward*2)); // Анимируем деньги при умножении
             YG2.SaveProgress();
 
             // Находим скрипт ButtonCooldown и запускаем кулдаун
@@ -115,4 +118,41 @@ public class Finish : MonoBehaviour
 
         return timePassed.TotalSeconds < 300; // 5 минут кулдаун
     }
+
+    private IEnumerator AnimateMoneyIncrease(int amount)
+    {
+        int startAmount = 0; // Награда начинается с 0
+        int targetAmount = amount; // Анимируем до полной награды
+        float duration = 1f; // Время анимации в секундах
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.unscaledDeltaTime; // Используем unscaledDeltaTime
+            int displayedAmount = (int)Mathf.Lerp(startAmount, targetAmount, elapsedTime / duration);
+            rewardText.text = displayedAmount.ToString(); // Обновляем UI награды
+            yield return null;
+        }
+
+        rewardText.text = targetAmount.ToString(); // Финальное обновление UI
+    }
+    private IEnumerator AnimateRatingIncrease(int amount)
+    {
+        int startAmount = 0;
+        int targetAmount = amount;
+        float duration = 1f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.unscaledDeltaTime;
+            int displayedAmount = (int)Mathf.Lerp(startAmount, targetAmount, elapsedTime / duration);
+            rewardRatingText.text = displayedAmount.ToString();
+            yield return null;
+        }
+
+        rewardRatingText.text = targetAmount.ToString();
+    }
+
+
 }
