@@ -88,6 +88,9 @@ public class Finish : MonoBehaviour
     {
         finalReward = rewardForLevel / position;
         rewardText.text = finalReward.ToString();
+
+        YG2.saves.money2 = finalReward;
+        YG2.SaveProgress();
         StartCoroutine(AnimateMoneyIncrease(finalReward)); // Запускаем анимацию увеличения денег
     }
 
