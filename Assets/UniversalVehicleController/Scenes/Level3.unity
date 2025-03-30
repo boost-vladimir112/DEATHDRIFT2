@@ -3817,6 +3817,14 @@ PrefabInstance:
       value: GameController_WithCarSelector
       objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: CarPrefabs.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
+      propertyPath: CarPrefabs.Array.data[18]
+      value: 
+      objectReference: {fileID: 9213616652853960229, guid: 93a04c5f0356876408bb24abf8587145, type: 3}
+    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: StartPositions.Array.data[0]
       value: 
       objectReference: {fileID: 279453262}

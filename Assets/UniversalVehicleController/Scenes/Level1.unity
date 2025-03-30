@@ -2924,11 +2924,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIConfigAsset: {fileID: 0}
   AIPath: {fileID: 0}
---- !u!4 &1539112815 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 96086685061131202, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-  m_PrefabInstance: {fileID: 3252014628470532736}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1554982850 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 986410112293886193, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
@@ -4113,34 +4108,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1430409818}
-    - target: {fileID: 901861078779190828, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 986410112293886193, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: m_fontSize
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 986410112293886193, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2293775019711228275, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 333.547
-      objectReference: {fileID: 0}
-    - target: {fileID: 2293775019711228275, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 236.221
-      objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535970, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_Name
       value: GameController_WithCarSelector
       objectReference: {fileID: 0}
-    - target: {fileID: 3252014629734535971, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: StartPositions.Array.data[0]
-      value: 
-      objectReference: {fileID: 1539112815}
     - target: {fileID: 3252014629734535972, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4179,10 +4150,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3252014629734535972, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313697513319803891, guid: 0a56027de01421a4ea8bf0342953a4a9, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

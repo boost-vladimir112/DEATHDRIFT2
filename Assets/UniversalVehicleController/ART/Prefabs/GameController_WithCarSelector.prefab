@@ -2575,7 +2575,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   TimeScaleText: {fileID: 3832518831185406016}
   StartPositions:
-  - {fileID: 0}
+  - {fileID: 96086685061131202}
   CarPrefabs:
   - {fileID: 3216702899630228816, guid: 4d74c7d67578b6e40984119cec6e3f9c, type: 3}
   - {fileID: 3216702899630228816, guid: 921b53b230d1487499181b7baa207ae9, type: 3}
@@ -2595,6 +2595,7 @@ MonoBehaviour:
   - {fileID: 8678609203692205512, guid: ff7b44cad6cdf9d418ea8dfda7c41bfa, type: 3}
   - {fileID: 8678609203692205512, guid: 80d3f023ec8c5614b9ac0793d677d335, type: 3}
   - {fileID: 8678609203692205512, guid: 13bddd6450583de4aa5194ae9a1d92a0, type: 3}
+  - {fileID: 9213616652853960229, guid: 93a04c5f0356876408bb24abf8587145, type: 3}
   m_SplitScreen: 0
 --- !u!1 &3313697513319803891
 GameObject:
@@ -4388,8 +4389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 293.44, y: -56.42499}
-  m_SizeDelta: {x: 219.11, y: 109.15}
+  m_AnchoredPosition: {x: 236.221, y: -56.42499}
+  m_SizeDelta: {x: 333.547, y: 109.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &927455788649303397
 CanvasRenderer:

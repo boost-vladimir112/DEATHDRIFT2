@@ -166,5 +166,6 @@ public class CarSelectionManager : MonoBehaviour
     public void OpenTelegramLink()
     {
         Application.OpenURL("https://t.me/tsukuyomi05"); // Ссылка на ваш канал
+        
     }
 }
