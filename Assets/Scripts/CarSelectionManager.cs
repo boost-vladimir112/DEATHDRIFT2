@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using YG;
@@ -12,14 +12,16 @@ public class CarSelectionManager : MonoBehaviour
     public Button leftButton;
     public Button rightButton;
     public Button actionButton;
-    public Button tgSubscribeButton; // Кнопка подписки
+    public Button tgSubscribeButton;
     public GameObject selectText;
     public TextMeshProUGUI priceText;
     public GameObject pricePanel;
+    public GameObject lockPanel; //  РќРѕРІР°СЏ РїР°РЅРµР»СЊ Р±Р»РѕРєРёСЂРѕРІРєРё РєРЅРѕРїРєРё РїРѕРєСѓРїРєРё
     public TextMeshProUGUI balanceText;
 
     public int balance;
-    public int carFromTGIndex = 3; // Индекс машины за подписку
+    public int carFromTGIndex = 3;
+    public int specialCarIndex = 18; // РРЅРґРµРєСЃ РїРѕСЃР»РµРґРЅРµР№ РјР°С€РёРЅС‹
     public UIUpdateRating uiUpdateRating = null;
 
     private int playerRating;
@@ -27,6 +29,7 @@ public class CarSelectionManager : MonoBehaviour
     private void Start()
     {
         playerRating = YG2.saves.playerRating;
+
         if (YG2.saves.carOwned.Count == 0)
         {
             YG2.saves.carOwned.Add(0);
@@ -61,7 +64,7 @@ public class CarSelectionManager : MonoBehaviour
 
     public void OnActionButtonClick()
     {
-        if (IsCarOwned(selectedCarIndex) || IsCarFromTG(selectedCarIndex))
+        if (IsCarOwned(selectedCarIndex) || IsCarFromTG(selectedCarIndex) || CanUnlockSpecialCar())
         {
             YG2.saves.SelectedCar = selectedCarIndex;
         }
@@ -72,7 +75,7 @@ public class CarSelectionManager : MonoBehaviour
                 balance -= carPrices[selectedCarIndex];
                 balanceText.text = balance.ToString();
 
-                playerRating += 10+selectedCarIndex;
+                playerRating += 10 + selectedCarIndex;
                 YG2.saves.playerRating = playerRating;
                 YG2.SetLeaderboard("rating", playerRating);
                 uiUpdateRating.UpdateText();
@@ -96,6 +99,23 @@ public class CarSelectionManager : MonoBehaviour
         return index == carFromTGIndex && YG2.saves.carFromTG;
     }
 
+    private bool AreAllCarsOwned()
+    {
+        for (int i = 0; i < specialCarIndex; i++)
+        {
+            if (!IsCarOwned(i))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private bool CanUnlockSpecialCar()
+    {
+        return selectedCarIndex == specialCarIndex && AreAllCarsOwned();
+    }
+
     private void UpdateUI()
     {
         for (int i = 0; i < cars.Length; i++)
@@ -103,13 +123,17 @@ public class CarSelectionManager : MonoBehaviour
             cars[i].SetActive(i == selectedCarIndex);
         }
 
-        if (IsCarOwned(selectedCarIndex) || IsCarFromTG(selectedCarIndex))
+        bool isOwned = IsCarOwned(selectedCarIndex) || IsCarFromTG(selectedCarIndex);
+        bool isSpecialCar = selectedCarIndex == specialCarIndex;
+        bool canUnlockSpecialCar = CanUnlockSpecialCar();
+
+        if (isOwned || canUnlockSpecialCar)
         {
             priceText.text = "";
             pricePanel.SetActive(false);
             actionButton.gameObject.SetActive(selectedCarIndex != YG2.saves.SelectedCar);
             selectText.SetActive(selectedCarIndex != YG2.saves.SelectedCar);
-            tgSubscribeButton.gameObject.SetActive(false); // Прячем кнопку подписки
+            tgSubscribeButton.gameObject.SetActive(false);
         }
         else
         {
@@ -117,9 +141,18 @@ public class CarSelectionManager : MonoBehaviour
             actionButton.gameObject.SetActive(true);
             selectText.SetActive(false);
             priceText.text = carPrices[selectedCarIndex].ToString();
-
-            // Если выбрана машина за Telegram, показываем кнопку подписки
             tgSubscribeButton.gameObject.SetActive(selectedCarIndex == carFromTGIndex);
+        }
+
+        //  Р‘Р»РѕРєРёСЂСѓРµРј РєРЅРѕРїРєСѓ РїРѕРєСѓРїРєРё РґР»СЏ СЃРїРµС†РёР°Р»СЊРЅРѕР№ РјР°С€РёРЅС‹, РїРѕРєР° РІСЃРµ РјР°С€РёРЅС‹ РЅРµ РєСѓРїР»РµРЅС‹
+        if (isSpecialCar && !canUnlockSpecialCar)
+        {
+            lockPanel.SetActive(true);
+            actionButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            lockPanel.SetActive(false);
         }
     }
 
@@ -132,6 +165,6 @@ public class CarSelectionManager : MonoBehaviour
 
     public void OpenTelegramLink()
     {
-        Application.OpenURL("https://t.me/tsukuyomi05"); // Ссылка на ваш канал
+        Application.OpenURL("https://t.me/tsukuyomi05"); // РЎСЃС‹Р»РєР° РЅР° РІР°С€ РєР°РЅР°Р»
     }
 }
