@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/UniversalVehicleController/Scenes/Level14.unity
     guid: 2af2e0671493f734f82ea645f61fdd72
   - enabled: 1
+    path: Assets/UniversalVehicleController/Scenes/Level15.unity
+    guid: ee467bd6e4a084b4f8710c0fa7b900c7
+  - enabled: 1
     path: Assets/UniversalVehicleController/Scenes/test level.unity
     guid: 0b6d27021ee086e43871c22debb792ab
   m_configObjects: {}
