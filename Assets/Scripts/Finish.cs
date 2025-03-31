@@ -29,10 +29,14 @@ public class Finish : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("SoundEnabled") == 1)
+        if (SoundToggle.IsSoundEnabled())
+        {
             AudioListener.pause = false;
+        }
         else
+        {
             AudioListener.pause = true;
+        }
 
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         balance = YG2.saves.money2;

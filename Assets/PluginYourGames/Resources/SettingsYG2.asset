@@ -81,7 +81,7 @@ MonoBehaviour:
       hi: []
     fontsTMP:
       defaultFont:
-      - {fileID: 11400000, guid: e244e7e7b3829e3479f792af74e0122c, type: 2}
+      - {fileID: 11400000, guid: 21a9d570ce7b4d440b920e9e743a18fb, type: 2}
       ru: []
       en: []
       tr: []
@@ -408,12 +408,12 @@ MonoBehaviour:
     testFailAds: 0
   Templates:
     logoImageFormat: 0
-    backgroundImgFormat: 3
+    backgroundImgFormat: 0
     gradientBackgroundByLoadGame:
       radial: 0
       angleInclination: 140
-      color1: {r: 1, g: 0.831, b: 0.149, a: 1}
-      color2: {r: 0.36, g: 0.09, b: 1, a: 1}
+      color1: {r: 0.16981131, g: 0.16838281, b: 0.16260234, a: 1}
+      color2: {r: 0.16862746, g: 0.16862746, b: 0.16078432, a: 1}
     customProgressBar: 1
     progressBarSettigs:
       round: 1

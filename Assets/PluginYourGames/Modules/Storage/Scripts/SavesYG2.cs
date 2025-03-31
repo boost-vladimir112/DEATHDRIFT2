@@ -14,5 +14,6 @@ namespace YG
         public int tgbonus = 0;
         public bool carFromTG;
         public int playerRating;
+        public bool soundEnabled = true;
     }
 }
