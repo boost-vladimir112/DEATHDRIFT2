@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_text: "\u79FB\u52D5 WASD\n\u30B9\u30DA\u30FC\u30B9\u30AD\u30FC -  \u3084\u3081\u308B\nShift
     - \u52A0\u901F\nC - \u30AB\u30E1\u30E9\u5909\u66F4\nR - \u8ECA\u3092\u3072\u3063\u304F\u308A\u8FD4\u3059"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c89b298d4f140b646b0948ea401b7b2f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e244e7e7b3829e3479f792af74e0122c, type: 2}
   m_sharedMaterial: {fileID: 5097889962664952658, guid: c89b298d4f140b646b0948ea401b7b2f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 814490577}
   m_maskType: 0
 --- !u!23 &814490577
@@ -1634,7 +1634,7 @@ MonoBehaviour:
       hi: []
     fontsTMP:
       defaultFont:
-      - {fileID: 11400000, guid: c89b298d4f140b646b0948ea401b7b2f, type: 2}
+      - {fileID: 11400000, guid: e244e7e7b3829e3479f792af74e0122c, type: 2}
       ru: []
       en: []
       tr: []
