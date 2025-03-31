@@ -10,8 +10,15 @@ public class SoundToggle : MonoBehaviour
 
     void Start()
     {
+        // Проверяем, существует ли ключ в PlayerPrefs
+        if (!PlayerPrefs.HasKey(SoundPrefKey))
+        {
+            PlayerPrefs.SetInt(SoundPrefKey, 1); // По умолчанию включаем звук
+            PlayerPrefs.Save();
+        }
+
         // Загружаем состояние звука из PlayerPrefs
-        bool isSoundEnabled = PlayerPrefs.GetInt(SoundPrefKey, 1) == 1;
+        bool isSoundEnabled = PlayerPrefs.GetInt(SoundPrefKey) == 1;
 
         // Устанавливаем состояние Toggle в зависимости от сохраненного значения
         soundToggle.isOn = isSoundEnabled;
@@ -36,13 +43,12 @@ public class SoundToggle : MonoBehaviour
     // Метод для включения/выключения звука
     void SetSound(bool isEnabled)
     {
-        // Включаем/выключаем звук с помощью AudioListener.pause
         AudioListener.pause = !isEnabled;
     }
 
     // Статический метод для получения состояния звука
     public static bool IsSoundEnabled()
     {
-        return !AudioListener.pause;  // Возвращаем, включен ли звук (false если звук выключен)
+        return !AudioListener.pause;
     }
 }
