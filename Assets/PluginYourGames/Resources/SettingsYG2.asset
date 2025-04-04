@@ -337,11 +337,11 @@ MonoBehaviour:
     testBuyFail: 0
     purshases:
     - id: 1
-      title: 1200
+      title: 2500
       description: 
       imageURI: demo image
-      price: 29 YAN
-      priceValue: 29
+      price: 49 YAN
+      priceValue: 49
       priceCurrencyCode: YAN
       currencyImageURL: https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-s@2x.png
       consumed: 1
@@ -364,11 +364,11 @@ MonoBehaviour:
       currencyImageURL: https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-s@2x.png
       consumed: 1
     - id: 2
-      title: Grenade
-      description: Product - Grenade
+      title: 5100
+      description: 5100
       imageURI: demo image
-      price: 30 YAN
-      priceValue: 30
+      price: 99 YAN
+      priceValue: 99
       priceCurrencyCode: YAN
       currencyImageURL: https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-s@2x.png
       consumed: 1
