@@ -823,8 +823,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187477490}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.418, z: 0.284}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.45000005, z: 0.27300456}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3761,11 +3761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379583338729536326, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.86
+      value: 17.73
       objectReference: {fileID: 0}
     - target: {fileID: 6379583338729536326, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.79
+      value: 0.829
       objectReference: {fileID: 0}
     - target: {fileID: 6379583338729536326, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3869,6 +3869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2220089318257438227, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+    - {fileID: 6379583338729536324, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2220089317324247625, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
     m_AddedGameObjects:
@@ -3913,8 +3914,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b83f384c50bd724ebf69345fc2bf6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraParent: {fileID: 2020561538}
+  CameraParentInCar: {fileID: 0}
+  PlayerControllerForCar: {fileID: 0}
   Camera: {fileID: 187477491}
-  walkingSpeed: 7
+  walkingSpeed: 7.06
   CroughSpeed: 1
   RuningSpeed: 4
   jumpSpeed: 6
@@ -3942,6 +3946,7 @@ MonoBehaviour:
   Lookvertical: 0
   Lookhorizontal: 0
   WalkingValue: 0
+  EnterExitKeyboardKey: 102
 --- !u!1 &973356528
 GameObject:
   m_ObjectHideFlags: 0
@@ -6584,6 +6589,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2020561538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6379583337767727503, guid: 2ec92e8f6f93ef64fae0eea1bede606b, type: 3}
+  m_PrefabInstance: {fileID: 967588865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2094949917
 GameObject:
   m_ObjectHideFlags: 0

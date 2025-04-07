@@ -16,6 +16,7 @@ namespace EvolveGames
         public Transform CameraParentInCar;
         public PG.PlayerController PlayerControllerForCar;
         public System.Action<CarController> OnExitAction;
+        public event System.Action OnEntrerInCar;
 
         [Header("PlayerController")]
         [SerializeField] public Transform Camera;
@@ -71,8 +72,11 @@ namespace EvolveGames
         float installGravity;
         bool WallDistance;
         [HideInInspector] public float WalkingValue;
+
+        public KeyCode EnterExitKeyboardKey = KeyCode.F;
         void Start()
         {
+
      
             characterController = GetComponent<CharacterController>();
            // if (Items == null && GetComponent<ItemChange>()) Items = GetComponent<ItemChange>();
@@ -119,8 +123,7 @@ namespace EvolveGames
             characterController.Move(moveDirection * Time.deltaTime);
             Moving = horizontal < 0 || vertical < 0 || horizontal > 0 || vertical > 0 ? true : false;
 
-            if (YG2.envir.isDesktop && Cursor.lockState == CursorLockMode.Locked && canMove ||
-                !YG2.envir.isDesktop && canMove)
+            if (canMove)
             {
                 var joystickLook = UIInputSystem.ME.GetAxis(JoyStickAction.CameraLook);
                 Lookvertical = -joystickLook.y - (YG2.envir.isDesktop ? Input.GetAxis("Mouse Y") : 0);
@@ -131,8 +134,10 @@ namespace EvolveGames
                 Camera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
                 transform.rotation *= Quaternion.Euler(0, Lookhorizontal * lookSpeed, 0);
 
-                if (isRunning && Moving) cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, RunningFOV, SpeedToFOV * Time.deltaTime);
-                else cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, InstallFOV, SpeedToFOV * Time.deltaTime);
+                if (isRunning && Moving)
+                    cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, RunningFOV, SpeedToFOV * Time.deltaTime);
+                else
+                    cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, InstallFOV, SpeedToFOV * Time.deltaTime);
             }
 
             if (Input.GetKey(CroughKey) || UIInputSystem.ME.GetButton(ButtonAction.Crouch))
@@ -160,7 +165,7 @@ namespace EvolveGames
                 //Items.ani.SetBool("Hide", WallDistance);
                 //Items.DefiniteHide = WallDistance;
             }
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(EnterExitKeyboardKey))
             {
                 TryEnterCar();
             }
@@ -219,6 +224,9 @@ namespace EvolveGames
                 if (car != null)
                 {
                     gameObject.SetActive(false);
+                    var playerListener = Camera.GetComponent<AudioListener>();
+                    if (playerListener != null)
+                        playerListener.enabled = false;
                     PlayerControllerForCar.EnterInCar(car);
                     PlayerControllerForCar.OnExitAction += OnExitFromCar;
 
@@ -235,6 +243,11 @@ namespace EvolveGames
         public void OnExitFromCar(CarController car)
         {
             PlayerControllerForCar.OnExitAction -= OnExitFromCar;
+            if (Camera == null || Camera.GetComponent<Camera>() == null)
+            {
+                Camera = GetComponentInChildren<Camera>().transform;
+
+            }
 
             Vector3 offsetPos = car.transform.right * (car.Bounds.size.x / 2 + characterController.radius);
             if (car.SteerWheel != null)
@@ -247,6 +260,9 @@ namespace EvolveGames
             transform.rotation = Quaternion.LookRotation(new Vector3(car.transform.forward.x, 0, car.transform.forward.z), Vector3.up);
 
             gameObject.SetActive(true);
+            var playerListener = Camera.GetComponent<AudioListener>();
+            if (playerListener != null)
+                playerListener.enabled = true;
 
             if (Camera == null)
                 Camera = GetComponentInChildren<Camera>().transform;
