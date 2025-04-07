@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4854066285173044843}
   - component: {fileID: 4854066285173044842}
+  - component: {fileID: 3170303548240061168}
   m_Layer: 0
   m_Name: Directional Light_Night
   m_TagString: Untagged
@@ -93,3 +94,16 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 88.9
+--- !u!114 &3170303548240061168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854066285173044841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
