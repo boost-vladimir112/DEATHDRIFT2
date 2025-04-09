@@ -2031,7 +2031,7 @@ MonoBehaviour:
       hi: []
     fontsTMP:
       defaultFont:
-      - {fileID: 11400000, guid: e244e7e7b3829e3479f792af74e0122c, type: 2}
+      - {fileID: 11400000, guid: 21a9d570ce7b4d440b920e9e743a18fb, type: 2}
       ru: []
       en: []
       tr: []
@@ -4724,7 +4724,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 61463deea3845dd4abf4d63863bf6457, type: 2}
+  - {fileID: 2100000, guid: e01491e1f7db4314189473d1f92b1ea9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
