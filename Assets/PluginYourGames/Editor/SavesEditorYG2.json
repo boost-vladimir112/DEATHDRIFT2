@@ -13,8 +13,8 @@
     false,
     false
   ],
-  "idSave": 66,
-  "money2": 26600,
+  "idSave": 69,
+  "money2": 29300,
   "level": 14,
   "SelectedCar": 0,
   "carOwned": [
@@ -22,6 +22,6 @@
   ],
   "tgbonus": 1,
   "carFromTG": false,
-  "playerRating": 1815,
+  "playerRating": 2055,
   "soundEnabled": true
 }
