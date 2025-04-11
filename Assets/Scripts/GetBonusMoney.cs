@@ -115,7 +115,7 @@ public class GetBonusMoney : MonoBehaviour
             YG2.RewardedAdvShow(rewardID, () =>
             {
                 // Получение вознаграждения
-                balance += 300;
+                balance += 600;
                 balanceText.text = balance.ToString();
                 YG2.saves.money2 = balance;
                 YG2.SaveProgress();
