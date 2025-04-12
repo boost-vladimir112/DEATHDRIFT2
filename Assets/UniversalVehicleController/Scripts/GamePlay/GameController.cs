@@ -102,7 +102,7 @@ namespace PG
         {
             YG2.InterstitialAdvShow();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            SoundToggle.SetSound(YG2.saves.soundEnabled);
+            
             Time.timeScale = 1f;
         }
         public void LoadMenuScene()
@@ -111,7 +111,7 @@ namespace PG
             SceneManager.LoadScene(0);
             
             Time.timeScale = 1f;
-            SoundToggle.SetSound(YG2.saves.soundEnabled);
+          
         }
         public void NextScene()
         {
@@ -119,7 +119,7 @@ namespace PG
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             
             Time.timeScale = 1f;
-            SoundToggle.SetSound(YG2.saves.soundEnabled);
+          
         }
 
         public void ChangeTimeScale(float delta)
