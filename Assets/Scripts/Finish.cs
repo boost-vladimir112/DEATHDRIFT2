@@ -29,14 +29,8 @@ public class Finish : MonoBehaviour
 
     private void Start()
     {
-        if (SoundToggle.IsSoundEnabled())
-        {
-            AudioListener.pause = false;
-        }
-        else
-        {
-            AudioListener.pause = true;
-        }
+        AudioListener.pause = false;
+       
 
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         balance = YG2.saves.money2;
@@ -104,7 +98,10 @@ public class Finish : MonoBehaviour
 
         YG2.RewardedAdvShow(rewardID, () =>
         {
-            StartCoroutine(AnimateMoneyIncrease(finalReward*2)); // Анимируем деньги при умножении
+            StartCoroutine(AnimateMoneyIncrease(finalReward*2));
+            finalReward = rewardForLevel / position;
+
+            YG2.saves.money2 = balance + finalReward * 2;// Анимируем деньги при умножении
             YG2.SaveProgress();
 
             // Находим скрипт ButtonCooldown и запускаем кулдаун
