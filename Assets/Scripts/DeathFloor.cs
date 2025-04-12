@@ -12,7 +12,7 @@ public class DeathFloor : MonoBehaviour
         {
             LosePanel.SetActive(true);
 
-            AudioListener.pause = true;
+            SoundToggle.SetSound(false);
             Time.timeScale = 0f;
         }
         if(other.CompareTag("Car"))

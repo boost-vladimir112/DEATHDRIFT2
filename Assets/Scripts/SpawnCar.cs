@@ -12,14 +12,7 @@ public class SpawnCar : MonoBehaviour
 
     void Start()
     {
-        if (SoundToggle.IsSoundEnabled())
-        {
-            AudioListener.pause = false;
-        }
-        else
-        {
-            AudioListener.pause = true;
-        }
+      
         if (StartPositions == null || StartPositions.Length == 0)
         {
             Debug.LogError("Стартовые позиции не заданы!");

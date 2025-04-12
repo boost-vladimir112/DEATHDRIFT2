@@ -29,8 +29,8 @@ public class Finish : MonoBehaviour
 
     private void Start()
     {
-        AudioListener.pause = false;
-       
+        SoundToggle.SetSound(YG2.saves.soundEnabled);
+
 
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         balance = YG2.saves.money2;
@@ -63,7 +63,7 @@ public class Finish : MonoBehaviour
 
                     YG2.SaveProgress();
                     winPanel.SetActive(true);
-                    AudioListener.pause = true;
+                    SoundToggle.SetSound(false);
                     Time.timeScale = 0f;
                 }
             }
@@ -100,7 +100,6 @@ public class Finish : MonoBehaviour
         {
             StartCoroutine(AnimateMoneyIncrease(finalReward*2));
             finalReward = rewardForLevel / position;
-
             YG2.saves.money2 = balance + finalReward * 2;// Анимируем деньги при умножении
             YG2.SaveProgress();
 

@@ -16,7 +16,10 @@ public class SoundToggle : MonoBehaviour
         // Добавляем слушатель
         soundToggle.onValueChanged.AddListener(OnToggleValueChanged);
     }
-
+    public static void SetSound(bool isEnabled)
+    {
+        AudioListener.pause = !isEnabled;
+    }
     void OnToggleValueChanged(bool isOn)
     {
         SetSound(isOn);
@@ -26,10 +29,7 @@ public class SoundToggle : MonoBehaviour
         YG2.SaveProgress();
     }
 
-    void SetSound(bool isEnabled)
-    {
-        AudioListener.pause = !isEnabled;
-    }
+   
 
     public static bool IsSoundEnabled()
     {
