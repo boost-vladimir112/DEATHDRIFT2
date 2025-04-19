@@ -46,7 +46,7 @@ MonoBehaviour:
       pt: 1
       ar: 0
       id: 1
-      ja: 1
+      ja: 0
       it: 1
       de: 1
       hi: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
       hi: []
     fontsTMP:
       defaultFont:
-      - {fileID: 11400000, guid: 21a9d570ce7b4d440b920e9e743a18fb, type: 2}
+      - {fileID: 11400000, guid: e244e7e7b3829e3479f792af74e0122c, type: 2}
       ru: []
       en: []
       tr: []
